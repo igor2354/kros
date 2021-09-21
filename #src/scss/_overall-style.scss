@@ -1,0 +1,79 @@
+body {
+	font-family: "SourceSansPro", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.375;
+	color: #ffffff;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1470px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// анимация ссылок
+
+.main-nav__link {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #CDCC42, #858515 50%, #14120B 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+	  background-position: 0 100%;
+	}
+  }
+
+.footer__link {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #858515, #CDCC42 50%, #14120B 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+	  background-position: 0 100%;
+	}
+}
+
+.footer .footer-2 .footer__link {
+    position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #858515, #CDCC42 50%, #9B9B9B 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+	  background-position: 0 100%;
+	}
+	&:active:before,
+	&:hover:before {
+		border-color: #CDCC42;
+		width: 0;
+	}
+}

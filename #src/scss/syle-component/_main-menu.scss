@@ -1,0 +1,144 @@
+.main-nav {
+	padding: 0;
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		margin-right: 50px;
+		padding: 15px 24px 15px 15px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& > .main-nav__submenu.show-menu {
+			padding-top: -19px;
+			top: 100%;
+			left: 0;
+		}
+
+		&.have-child::after {
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			right: 0px;
+			content: "";
+			background-image: url("../img/dropmeny-icon.svg");
+			width: 7px;
+			height: 4px;
+			background-size: 7px;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+
+	// & .main-nav__link.have-child::after {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	right: -18px;
+	// 	content: "";
+	// 	background-image: url("../img/dropmeny-icon.svg");
+	// 	width: 7px;
+	// 	height: 4px;
+	// 	background-size: 7px;
+	// 	background-position: center;
+	// 	background-repeat: no-repeat;
+	// }
+
+	&__link {
+		font-family: "OpenSans", sans-serif;
+		color: #14120B;
+	}
+
+	&__submenu {
+		position: relative;
+		background: #fff;
+	}
+
+	&__submenu {
+
+	}
+
+	&__subitem {
+	}
+
+	& .hover-item {
+		&:hover,
+		&:active {
+		}
+	}
+
+	&__sublink {
+		font-family: "OpenSans", sans-serif;
+		display: block;
+		padding: 15px;
+		color: #14120B;
+		background: #fff;
+		transition: all 0.3s ease;
+	}
+
+	& .show-menu {
+		position: absolute;
+
+		top: 0;
+		left: 100%;
+
+		min-width: 200px;
+
+		opacity: 0;
+		visibility: hidden;
+
+		transition: all 0.3s ease;
+	}
+
+	& .hover-item {
+		position: relative;
+		&:hover {
+			& > .show-menu {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+// анимация ссылок
+
+.main-nav__link {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #CDCC42, #858515 50%, #14120B 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+	  background-position: 0 100%;
+	}
+  }
+
+.main-nav__sublink {
+	position: relative;
+
+	background: linear-gradient(to right, #CDCC42, #858515 50%, #14120B 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+	  background-position: 0 100%;
+	}
+  }
