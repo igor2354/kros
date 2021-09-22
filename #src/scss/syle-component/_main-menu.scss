@@ -1,4 +1,4 @@
-.main-nav {
+.header .main-nav {
 	padding: 0;
 
 	&__list {
@@ -111,7 +111,7 @@
 
 // анимация ссылок
 
-.main-nav__link {
+.header .main-nav__link {
 	position: relative;
 	overflow: hidden;
 	background: linear-gradient(to right, #CDCC42, #858515 50%, #14120B 50%);
@@ -127,7 +127,7 @@
 	}
   }
 
-.main-nav__sublink {
+  .header .main-nav__sublink {
 	position: relative;
 
 	background: linear-gradient(to right, #CDCC42, #858515 50%, #14120B 50%);
@@ -142,3 +142,25 @@
 	  background-position: 0 100%;
 	}
   }
+
+  @media (max-width: 1400px) {
+	.header .main-nav__item {
+	  margin-right: 35px;
+	}
+  }
+
+  @media (max-width: 1300px) {
+	.header .header__row:first-child .header__item:first-child:after {
+		display: none;
+	}
+  }
+
+  @media (max-width: 1170px) {
+	.header .main-nav__link {
+		@include adaptiv-font(16, 12);
+	}
+
+	.header .main-nav__sublink {
+		@include adaptiv-font(16, 12);
+	}
+}
