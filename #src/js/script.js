@@ -3,8 +3,8 @@ document.addEventListener(
 	function () {
         let swiper_portfolio = new Swiper(".portfolio-slider", {
 			// Optional parameters
-			slidesPerView: 3,
-			spaceBetween: 30,
+			slidesPerView: 1,
+			spaceBetween: 20,
 			loop: true,
 
 			// autoplay: {
@@ -22,12 +22,16 @@ document.addEventListener(
 				prevEl: ".portfolio-slider__prev",
 			},
 
-			// breakpoints: {
-			// 	900: {
-			// 		slidesPerView: 3,
-			// 		spaceBetween: 30,
-			// 	},
-			// },
+			breakpoints: {
+				700: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1170: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+			},
 		});
 
         let swiper_tenants = new Swiper(".tenants-slider", {
