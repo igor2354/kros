@@ -40,6 +40,20 @@ document.addEventListener(
 			spaceBetween: 0,
 			loop: true,
 
+			on: {
+				resize: function() {
+					this.slides.forEach(element => {
+						element.style.height = element.clientWidth + "px";
+					});
+				},
+
+				afterInit: function() {
+					this.slides.forEach(element => {
+						element.style.height = element.clientWidth + "px";
+					});
+				}
+			},
+
 			// autoplay: {
 			// 	delay: 1000,
 			// },
@@ -120,6 +134,18 @@ $(document).ready(function () {
 		$("html").removeClass("lock");
 	});
 
+	$(window).scroll(function (e) {
+		if ($(this).scrollTop() > 0) {
+		  $('#scroller').fadeIn();
+		} else {
+		  $('#scroller').fadeOut();
+		}
+	  });
+	  $('#scroller').click(function (e) {
+		e.preventDefault();
+		$('body,html').animate({ scrollTop: 0 }, 400);
+	  });
+
 	// Попапы
 	// $(".js-show-popup").on("click", function (e) {
 	// 	e.preventDefault();
@@ -154,3 +180,4 @@ $(document).ready(function () {
 	// 	$("body").removeClass("lock");
 	// });
 });
+
