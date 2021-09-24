@@ -31,9 +31,6 @@
     }
   }
 
-  & .header__item-search {
-  }
-
   & .header__item-lang {
     display: flex;
     flex-direction: row;
@@ -68,6 +65,8 @@
     max-width: 250px;
     width: 100%;
     flex-shrink: 1;
+    display: flex;
+    align-items: center;
   }
   &__item-search {
     background: transparent;
@@ -77,23 +76,24 @@
     transform: translate(-50%, 0);
 
     width: 0px;
-    height: 45px;
+    height: 25px;
 
-    line-height: 45px;
-    padding-right: 55px;
+    line-height: 25px;
+    padding-right: 20px;
     
     transition: all 0.5s ease;
   }
   
   & .input {
-    border: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     background: transparent;
     width: 0%;
     outline: none;
     font-family: "SourceSansPro", sans-serif;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 14px;
     color: #14120B;
-    opacity: 0.7;
+    opacity: 0.2;
     transition: all 0.3s ease;
     position: relative;
   }
@@ -114,24 +114,36 @@
   }
   
   &__item-search.active {
-    width: 250px;
+    width: 110px;
     position: absolute;
     top: 0;
     left: 50%;
     background: #fff;
     flex-grow: 1;
-    padding-left: 25px;
     transition: all 0.5s ease;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
+    border-bottom: 1px solid #CDCC42;
     & .header__item:nth-child(3) {
         width: 100%;
+    }
+
+    & .fa {
+      color: #14120B;
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/search-active.svg) no-repeat center;
+      cursor: pointer;
+    }
+
+    & .fa-search {
+      width: 20px;
+      height: 20px;
     }
   }
   
   .input.active {
     width: 98%;
-    padding-left: 5px;
     transition: all 0.5s 0.8s ease;
   }
   
@@ -246,10 +258,22 @@
     transform: translate(-50%, 0);
 
     width: 100%;
+    border-bottom: 1px solid #CDCC42;
+  }
 
-    padding-left: 25px;
-    border-radius: 20px;
-    border: 1px solid #E0E0E0;
+  .header__item-search .fa {
+    color: #14120B;
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../img/search-active.svg) no-repeat center;
+    cursor: pointer;
+  }
+
+  .header__item-search .fa-search {
+    width: 20px;
+    height: 20px;
   }
   
   .header .input {

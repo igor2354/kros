@@ -36,8 +36,8 @@ document.addEventListener(
 
         let swiper_tenants = new Swiper(".tenants-slider", {
 			// Optional parameters
-			slidesPerView: "auto",
-			spaceBetween: 20,
+			slidesPerView: 1,
+			spaceBetween: 0,
 			loop: true,
 
 			// autoplay: {
@@ -55,12 +55,29 @@ document.addEventListener(
 				prevEl: ".tenants__prev",
 			},
 
-			// breakpoints: {
-			// 	900: {
-			// 		slidesPerView: 3,
-			// 		spaceBetween: 30,
-			// 	},
-			// },
+			breakpoints: {
+				370: {
+					slidesPerView: 2,
+					spaceBetween: -10,
+				},
+				500: {
+					slidesPerView: 3,
+					spaceBetween: -20,
+				},
+				900: {
+					slidesPerView: 4,
+					spaceBetween: -20,
+				},
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: -20,
+				},
+
+				1500: {
+					slidesPerView: 6,
+					spaceBetween: -20,
+				},
+			},
 		});
 	},
 	false
