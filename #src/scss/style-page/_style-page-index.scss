@@ -90,7 +90,7 @@
             }
         }
         &:last-child {
-            width: 60%;
+            width: 63%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -238,7 +238,7 @@
 
 .promo-first {
     &__wrap {
-        padding: 74px 0 142px 0;
+        padding: 70px 0 124px 0;
     }
     &__title {
         font-family: "Arial", sans-serif;
@@ -275,10 +275,10 @@
     background: #fff;
     color: #14120B;
     &__wrap {
-        padding: 80px 0;
+        padding: 80px 0 70px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 141px;
+        grid-row-gap: 110px;
     }
     &__item {
         display: flex;
@@ -328,7 +328,7 @@
 .leaders {
     background: #14120B;
     &__wrap {
-        padding: 67px 0 103px 0;
+        padding: 67px 0 77px 0;
     }
 
     &__title {
@@ -408,7 +408,7 @@
         &:before {
             position: absolute;
             content: "+";
-            bottom: -10%;
+            bottom: -7%;
             right: 33%;
             color: #fff;
             font-size: 13px;
@@ -475,7 +475,7 @@
             bottom: 0;
             right: 8px;
             width: 77%;
-            border-bottom: 1px solid #fff;
+            border-bottom: 2px solid #fff;
             height: 1px;
             transition: all 275ms ease;
         }
@@ -619,6 +619,11 @@
 
     .leaders__title-h2 {
         text-align: center;
+    }
+
+    .leaders__link-more:after {
+        border-bottom: 1px solid #fff;
+        width: 81%;
     }
 }
 
@@ -932,8 +937,8 @@
 }
 
 .block-info {
-    padding-top: 16px;
-    padding-bottom: 24px;
+    padding-top: 14px;
+    padding-bottom: 12px;
 }
 
 .block-info,
@@ -1118,7 +1123,7 @@
 
     &__background-color {
         & .tenants-slider {
-            padding: 77px 0 83px 0;
+            padding: 77px 0 111px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1137,6 +1142,10 @@
         &:last-child {
             margin-right: 0px;
         }
+    }
+
+    &__list {
+        margin-bottom: 38px;
     }
     &__next:before {
             position: absolute;
@@ -1222,6 +1231,10 @@
 
 @media (max-width: 500px) {
 
+    .tenants__background-color .tenants-slider {
+        padding: 5% 0 13% 0;
+    }
+    
     .tenants__prev:before,
     .tenants__next:before {
         width: 35px;

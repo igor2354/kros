@@ -3,7 +3,7 @@
         background: #fff;
         color: #14120B;
         &__wrap {
-            padding: 52px 0 50px 0;
+            padding: 60px 0 40px 0;
         }
 
         & .footer__row {
@@ -38,7 +38,7 @@
             content: "";
             bottom: 0;
             left: 0;
-            border-bottom: 1px solid #14120B;
+            border-bottom: 2px solid #14120B;
             width: 53px;
             max-width: 100%;
             
@@ -54,7 +54,7 @@
     & .footer-2 {
         background: #14120B;
         &__wrap {
-            padding: 24px 0 33px 0;
+            padding: 24px 0 40px 0;
         }
         & .footer__link {
             color: #9B9B9B;
