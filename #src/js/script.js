@@ -179,5 +179,19 @@ $(document).ready(function () {
 	// 	$(this).fadeOut();
 	// 	$("body").removeClass("lock");
 	// });
+
+	$(".js-tab").on("click", function (e) {
+		e.preventDefault();
+
+		let elementId = $(this).attr("href");
+
+		$(this).parent().find(".js-tab").removeClass("active");
+
+		$(elementId).parent().find(".js-tab-item").removeClass("active");
+
+		$(this).addClass("active");
+
+		$(elementId).addClass("active");
+	});
 });
 

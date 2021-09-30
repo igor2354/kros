@@ -1722,6 +1722,13 @@ html.lock {
   .seo-text__wrap {
     padding: 13% 0 14% 0; } }
 
+.about-section {
+  padding-bottom: 130px; }
+
+.history .container-section__wrap {
+  display: grid;
+  grid-template-columns: 1fr 5fr; }
+
 .footer .footer-1 {
   background: #fff;
   color: #14120B; }

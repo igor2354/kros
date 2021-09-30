@@ -1,0 +1,12 @@
+.about-section {
+    padding-bottom: 130px;
+}
+
+.history {
+    & .container-section {
+        &__wrap {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+        }
+    }
+}
