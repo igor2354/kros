@@ -93,6 +93,28 @@ document.addEventListener(
 				},
 			},
 		});
+
+		let swiper_about = new Swiper(".main-slider", {
+			// Optional parameters
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loop: true,
+
+			// autoplay: {
+			// 	delay: 1000,
+			// },
+
+			// If we need pagination
+			pagination: {
+				el: ".slider-pagination",
+			},
+
+			// Navigation arrows
+			navigation: {
+				nextEl: ".slider-next",
+				prevEl: ".slider-prev",
+			},
+		});
 	},
 	false
 );

@@ -27,3 +27,73 @@ html.lock {
     overflow: hidden;
   }
 
+main {
+	padding-top: 100px;
+}
+
+@media (max-width: 1170px) {
+	main {
+		padding-top: 75px;
+	}
+}
+
+@media (max-width: 800px) {
+	main {
+		padding-top: 90px;
+	}
+}
+
+@media (max-width: 400px) {
+	main {
+		padding-top: 100px;
+	}
+}
+
+.breadcrumbs__list {
+	display: flex;
+	font-family: "OpenSans", serif;
+	font-size: 16px;
+	& a {
+		color: #fff;
+		margin-right: 10px;
+		margin-left: 10px;
+		position: relative;
+		&:first-child {
+			margin-left: 0;
+		}
+		&::after {
+			position: absolute;
+			content: "/";
+			top: 0;
+			right: -14px;
+			
+		}
+	}
+
+	& span {
+		margin-left: 10px;
+		font-weight: 800;
+	}
+}
+
+h1, .title_h1 {
+	font-family: "OpenSans", serif;
+	font-size: 80px;
+	line-height: 1;
+}
+
+.color-link {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #fff 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+	  background-position: 0 100%;
+	}
+}
