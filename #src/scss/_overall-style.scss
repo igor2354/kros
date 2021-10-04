@@ -53,10 +53,9 @@ main {
 	display: flex;
 	font-family: "OpenSans", serif;
 	font-size: 16px;
-	& a {
-		color: #fff;
-		margin-right: 10px;
-		margin-left: 10px;
+}
+
+.breadcrumbs__item {
 		position: relative;
 		&:first-child {
 			margin-left: 0;
@@ -68,11 +67,33 @@ main {
 			right: -14px;
 			
 		}
+	& a {
+		color: #fff;
+		margin-right: 10px;
+		margin-left: 10px;
+		position: relative;
+
 	}
 
 	& span {
 		margin-left: 10px;
 		font-weight: 800;
+	}
+
+}
+
+section ul li:not(.breadcrumbs__item) {
+	position: relative;
+	margin-left: 25px;
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: -18px;
+		transform: translate(-50%, -50%);
+		content: "";
+		background-image: url("../img/team-plus.svg");
+		width: 14px;
+		height: 13px;
 	}
 }
 

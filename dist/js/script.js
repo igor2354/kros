@@ -98,7 +98,8 @@ document.addEventListener(
 			// Optional parameters
 			slidesPerView: 1,
 			spaceBetween: 0,
-			loop: true,
+			loop: false,
+			watchOverflow: true,
 
 			// autoplay: {
 			// 	delay: 1000,
@@ -115,6 +116,7 @@ document.addEventListener(
 				prevEl: ".slider-prev",
 			},
 		});
+
 	},
 	false
 );
@@ -214,6 +216,7 @@ $(document).ready(function () {
 		$(this).addClass("active");
 
 		$(elementId).addClass("active");
+		
 	});
 });
 
