@@ -122,6 +122,66 @@ document.addEventListener(
 );
 
 $(document).ready(function () {
+	let match = [window.matchMedia("(max-width: 1170px)")];
+
+	// Расставляем точки на карте
+	$.each($(".our-offices__item"), function (index, val) {
+		let coordinatesTop = $(val).attr("data-coordinates-top");
+		let coordinatesLeft = $(val).attr("data-coordinates-left");
+
+		$(val).css({ top: coordinatesTop, left: coordinatesLeft });
+	});
+
+	$.each($(".our-offices__info"), function(index, val) {
+		if ($(window).width() < $(val).offset().left + $(val).innerWidth()) {
+			$(val).addClass("--right");
+		}
+	});
+
+	$(window).on("resize", function() {
+		$.each($(".our-offices__info"), function(index, val) {
+			if ($(window).width() < $(val).offset().left + $(val).innerWidth()) {
+				$(val).addClass("--right");
+			}
+		});
+	});
+
+
+	$(".close-map").on("click", function() {
+		$(this).parents(".our-offices__item").removeClass("active");
+		$(this).parents(".our-offices__info").removeClass("active");
+	});
+
+	$(".our-offices__icon-marker").on("click", function() {
+		$(".our-offices__item").removeClass("active");
+		$(".our-offices__info").removeClass("active");
+
+		$(this).parents(".our-offices__item").addClass("active");
+
+		$(`.our-offices__info[data-city=${$(this).parents(".our-offices__item").attr("data-city")}]`).addClass("active");
+	});
+
+	function moveMapHint() {
+		if (match[0].matches) {
+			$.each($(".our-offices__info"), function(index, val) {
+				$(".container-section__list").append($(val));
+			});
+
+			$(".our-offices__icon-marker").eq(0).click();
+		} else {
+			$.each($(".our-offices__info"), function(index, val) {
+				let dataCity = $(val).attr("data-city");
+
+				$(`.our-offices__item[data-city=${dataCity}]`).append($(val));
+			});
+		}
+	};
+
+	moveMapHint();
+	match[0].addListener(moveMapHint);
+
+
+
 	// Клон элементов в мобильное меню
 
 	$.each($(".js-mobile-menu > li"), function (index, val) {
