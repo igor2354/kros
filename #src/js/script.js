@@ -117,6 +117,28 @@ document.addEventListener(
 			},
 		});
 
+		let swiper_team = new Swiper(".team__container", {
+			// Optional parameters
+			slidesPerView: 2,
+			spaceBetween: 120,
+			loop: true,
+
+			// autoplay: {
+			// 	delay: 1000,
+			// },
+
+			// If we need pagination
+			// pagination: {
+			// 	el: ".slider-pagination",
+			// },
+
+			// Navigation arrows
+			// navigation: {
+			// 	nextEl: ".slider-next",
+			// 	prevEl: ".slider-prev",
+			// },
+		});
+
 	},
 	false
 );

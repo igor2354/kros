@@ -64,8 +64,12 @@ main {
 			position: absolute;
 			content: "/";
 			top: 0;
-			right: -14px;
+			right: -5px;
 			
+		}
+
+		&:last-child::after {
+			display: none;
 		}
 	& a {
 		color: #fff;
@@ -80,6 +84,12 @@ main {
 		font-weight: 800;
 	}
 
+}
+
+@media (max-width: 1170px) {
+    .breadcrumbs__list {
+        @include adaptiv-font(16, 12);
+    }
 }
 
 section ul li:not(.breadcrumbs__item) {
