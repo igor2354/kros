@@ -138,14 +138,17 @@ document.addEventListener(
 
 						600: {
 							spaceBetween: 40,
+							slidesPerView: 2,
 						},
 
 						700: {
 							spaceBetween: 60,
+							slidesPerView: 2,
 						},
 						
 						800: {
 							spaceBetween: 120,
+							slidesPerView: 2,
 						},
 					},
 		
