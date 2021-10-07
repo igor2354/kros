@@ -117,27 +117,52 @@ document.addEventListener(
 			},
 		});
 
-		let swiper_team = new Swiper(".team__container", {
-			// Optional parameters
-			slidesPerView: 2,
-			spaceBetween: 120,
-			loop: true,
+		let sliderTeam = Array.prototype.slice.call(document.querySelectorAll(".js-slider-team"));
 
-			// autoplay: {
-			// 	delay: 1000,
-			// },
+		if (sliderTeam.length > 0) {
+			sliderTeam.forEach(element => {
+				let centerImage = element.querySelector(".team__center-image");
+				let curentSrcImage = centerImage.getAttribute("src");
 
-			// If we need pagination
-			// pagination: {
-			// 	el: ".slider-pagination",
-			// },
+				let swiper_team = new Swiper( element.querySelector(".team__container"), {
+					// Optional parameters
+					slidesPerView: 1,
+					spaceBetween: 20,
+					loop: true,
 
-			// Navigation arrows
-			// navigation: {
-			// 	nextEl: ".slider-next",
-			// 	prevEl: ".slider-prev",
-			// },
-		});
+					breakpoints: {
+						500: {
+							spaceBetween: 20,
+							slidesPerView: 2,
+						},
+
+						600: {
+							spaceBetween: 40,
+						},
+
+						700: {
+							spaceBetween: 60,
+						},
+						
+						800: {
+							spaceBetween: 120,
+						},
+					},
+		
+					on: {
+						afterInit: function() {
+							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") :  curentSrcImage;
+							centerImage.setAttribute("src", activeSlideSrc);
+						},
+
+						slideChange: function() {
+							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") :  curentSrcImage;
+							centerImage.setAttribute("src", activeSlideSrc);
+						}
+					}
+				});
+			});
+		}
 
 	},
 	false

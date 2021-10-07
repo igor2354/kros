@@ -310,22 +310,53 @@ section:last-child {
 .team {
     background-color: #FAFAFA;
     &__image {
-        width: 450px;
-        height: 350px;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+
+    &__center-image {
+        width: 50%;
         object-fit: cover;
     }
 
+    &__center-image,
+    &__image {
+        height: 350px;
+    }
+
     &__slide {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 1);
+        &.swiper-slide-next {
+            position: relative;
+            &:before {
+                position: absolute;
+                top: -62px;
+                left: -7px;
+                transform: translate(-50%, 0);
+                content: "";
+                background-image: url(../img/plus-team.svg);
+                width: 110px;
+                height: 111px;
+                opacity: 0.2;
+                // background-size: contain;
+            }
+        }
     }
 
     &__center-slide {
         display: flex;
         justify-content: center;
         position: relative;
-        bottom: 200px;
+        bottom: 300px;
         z-index: 2;
+        pointer-events: none;
     }
+
+
+
+
     &__title {
         position: absolute;
         bottom: 0;
@@ -342,10 +373,16 @@ section:last-child {
         z-index: 10;
     }
 
+    &__container {
+        padding-top: 60px;
+        margin-top: -60px;
+    }
+
     &__txt-block {
         display: flex;
         color: #14120B;
         justify-content: space-between;
+        margin-top: -270px;
     }
 
     &__column {
@@ -387,7 +424,7 @@ section:last-child {
     }
 
     &__item {
-        margin-bottom: 100px;
+        margin-bottom: 160px;
     }
 
     &__item:last-child {
@@ -459,6 +496,7 @@ section:last-child {
     &__size {
         position: relative;
         display: inline-block;
+        color: #000;
         &:before {
             position: absolute;
             top: 50%;
@@ -662,6 +700,10 @@ section:last-child {
     .close-map {
         display: none;
     }
+
+    .team .container-section__anchors {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 1170px) {
@@ -864,6 +906,26 @@ section:last-child {
     .reporting .container-section__content {
         grid-template-columns: 1fr 1fr;
     }
+
+    .team__center-image, .team__image {
+        height: 300px;
+    }
+
+    .team__center-slide {
+        bottom: 250px;
+    }
+
+    .team__txt-block {
+        margin-top: -220px;
+    }
+
+    .team__slide.swiper-slide-next:before {
+        top: -45px;
+        left: -5px;
+        background-size: contain;
+        width: 80px;
+        height: 80px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -923,9 +985,36 @@ section:last-child {
     .our-offices__addres::after {
         bottom: -12px;
     }
+
+    .team__center-image, .team__image {
+        height: 200px;
+    }
+
+    .team__center-slide {
+        bottom: 150px;
+    }
+
+    .team__txt-block {
+        margin-top: -120px;
+    }
+
+    .team__slide.swiper-slide-next:before {
+        top: -28px;
+        left: -3px;
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 600px) {
+    .history__tab-button {
+        margin-right: 20px;
+    }
+
+    .history__tab-button.active::after {
+        bottom: -11px;
+    }
+
     .about-section__wrap,
     .about-section,
     .main-slider__image img {
@@ -937,6 +1026,65 @@ section:last-child {
         width: 30px;
         height: 30px;
         top: -15px;
+    }
+
+    .team__center-image {
+        display: none;
+    }
+
+    .team__center-slide {
+        bottom: initial;
+    }
+
+    .team__title {
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 40%;
+    }
+
+    .team__txt-block {
+        margin-top: 5%;
+    }
+
+    .team__slide.swiper-slide-next:before {
+        top: -17px;
+        left: -2px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .team__image {
+        opacity: 1;
+    }
+
+    .team__slide {
+        background-color: none;
+    }
+}
+@media (max-width: 500px) {
+    .team__center-image, .team__image {
+        height: 250px;
+    }
+
+    .team__slide.swiper-slide-next:before {
+        display: none;
+    }
+
+    .team__title {
+        width: 50%;
+        &:before {
+            position: absolute;
+            top: -17px;
+            left: -2px;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, 0);
+            content: "";
+            background-image: url(../img/plus-team.svg);
+            opacity: 1;
+            background-size: contain;
+        }
     }
 }
 
@@ -1005,6 +1153,10 @@ section:last-child {
 
     .our-offices__info::before {
         left: 7px;
+    }
+
+    .team__title {
+        width: 60%;
     }
 }
 
