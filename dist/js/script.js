@@ -1,22 +1,11 @@
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
-        let swiper_portfolio = new Swiper(".portfolio-slider", {
-			// Optional parameters
+		let swiper_portfolio = new Swiper(".portfolio-slider", {
 			slidesPerView: 1,
 			spaceBetween: 20,
 			loop: true,
 
-			// autoplay: {
-			// 	delay: 1000,
-			// },
-
-			// If we need pagination
-			// pagination: {
-			// 	el: ".example-slider__pagination",
-			// },
-
-			// Navigation arrows
 			navigation: {
 				nextEl: ".portfolio-slider__next",
 				prevEl: ".portfolio-slider__prev",
@@ -34,34 +23,58 @@ document.addEventListener(
 			},
 		});
 
-        let swiper_tenants = new Swiper(".tenants-slider", {
+		let swiper_tenants_breakpoint;
+
+		let swiper_tenants = new Swiper(".tenants-slider", {
 			// Optional parameters
 			slidesPerView: 1,
 			spaceBetween: 0,
 			loop: true,
 
 			on: {
-				resize: function() {
-					this.slides.forEach(element => {
+				resize: function () {
+					this.slides.forEach((element) => {
 						element.style.height = element.clientWidth + "px";
 					});
 				},
 
-				afterInit: function() {
-					this.slides.forEach(element => {
+				afterInit: function () {
+					this.slides.forEach((element) => {
 						element.style.height = element.clientWidth + "px";
 					});
-				}
+
+					this.slides.forEach((element) => {
+						element.style.zIndex = "1";
+					});
+
+					this.el.style.borderRadius = this.slides[0].clientWidth + "px";
+
+					this.slides[this.activeIndex - 1] ? (this.slides[this.activeIndex - 1].style.zIndex = "0") : null;
+
+					this.slides[this.activeIndex + swiper_tenants_breakpoint] ? (this.slides[this.activeIndex + swiper_tenants_breakpoint].style.zIndex = "-1") : null;
+				},
+
+				slideChange: function () {
+					this.slides.forEach((element) => {
+						element.style.zIndex = "1";
+					});
+
+					this.slides[this.activeIndex - 1] ? (this.slides[this.activeIndex - 1].style.zIndex = "0") : null;
+
+					this.slides[this.activeIndex + swiper_tenants_breakpoint] ? (this.slides[this.activeIndex + swiper_tenants_breakpoint].style.zIndex = "-1") : null;
+				},
+
+				breakpoint: function (swiper, breakpointParams) {
+					this.slides.forEach((element) => {
+						element.style.zIndex = "1";
+					});
+
+					swiper_tenants_breakpoint = breakpointParams.slidesPerView ? breakpointParams.slidesPerView : 6;
+					this.slides[this.activeIndex - 1] ? (this.slides[this.activeIndex - 1].style.zIndex = "0") : null;
+
+					this.slides[this.activeIndex + swiper_tenants_breakpoint] ? (this.slides[this.activeIndex + swiper_tenants_breakpoint].style.zIndex = "-1") : null;
+				},
 			},
-
-			// autoplay: {
-			// 	delay: 1000,
-			// },
-
-			// If we need pagination
-			// pagination: {
-			// 	el: ".example-slider__pagination",
-			// },
 
 			// Navigation arrows
 			navigation: {
@@ -120,11 +133,11 @@ document.addEventListener(
 		let sliderTeam = Array.prototype.slice.call(document.querySelectorAll(".js-slider-team"));
 
 		if (sliderTeam.length > 0) {
-			sliderTeam.forEach(element => {
+			sliderTeam.forEach((element) => {
 				let centerImage = element.querySelector(".team__center-image");
 				let curentSrcImage = centerImage.getAttribute("src");
 
-				let swiper_team = new Swiper( element.querySelector(".team__container"), {
+				let swiper_team = new Swiper(element.querySelector(".team__container"), {
 					// Optional parameters
 					slidesPerView: 1,
 					spaceBetween: 20,
@@ -145,28 +158,27 @@ document.addEventListener(
 							spaceBetween: 60,
 							slidesPerView: 2,
 						},
-						
+
 						800: {
 							spaceBetween: 120,
 							slidesPerView: 2,
 						},
 					},
-		
+
 					on: {
-						afterInit: function() {
-							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") :  curentSrcImage;
+						afterInit: function () {
+							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") : curentSrcImage;
 							centerImage.setAttribute("src", activeSlideSrc);
 						},
 
-						slideChange: function() {
-							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") :  curentSrcImage;
+						slideChange: function () {
+							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") : curentSrcImage;
 							centerImage.setAttribute("src", activeSlideSrc);
-						}
-					}
+						},
+					},
 				});
 			});
 		}
-
 	},
 	false
 );
@@ -182,27 +194,26 @@ $(document).ready(function () {
 		$(val).css({ top: coordinatesTop, left: coordinatesLeft });
 	});
 
-	$.each($(".our-offices__info"), function(index, val) {
+	$.each($(".our-offices__info"), function (index, val) {
 		if ($(window).width() < $(val).offset().left + $(val).innerWidth()) {
 			$(val).addClass("--right");
 		}
 	});
 
-	$(window).on("resize", function() {
-		$.each($(".our-offices__info"), function(index, val) {
+	$(window).on("resize", function () {
+		$.each($(".our-offices__info"), function (index, val) {
 			if ($(window).width() < $(val).offset().left + $(val).innerWidth()) {
 				$(val).addClass("--right");
 			}
 		});
 	});
 
-
-	$(".close-map").on("click", function() {
+	$(".close-map").on("click", function () {
 		$(this).parents(".our-offices__item").removeClass("active");
 		$(this).parents(".our-offices__info").removeClass("active");
 	});
 
-	$(".our-offices__icon-marker").on("click", function() {
+	$(".our-offices__icon-marker").on("click", function () {
 		$(".our-offices__item").removeClass("active");
 		$(".our-offices__info").removeClass("active");
 
@@ -213,24 +224,22 @@ $(document).ready(function () {
 
 	function moveMapHint() {
 		if (match[0].matches) {
-			$.each($(".our-offices__info"), function(index, val) {
+			$.each($(".our-offices__info"), function (index, val) {
 				$(".container-section__list").append($(val));
 			});
 
 			$(".our-offices__icon-marker").eq(0).click();
 		} else {
-			$.each($(".our-offices__info"), function(index, val) {
+			$.each($(".our-offices__info"), function (index, val) {
 				let dataCity = $(val).attr("data-city");
 
 				$(`.our-offices__item[data-city=${dataCity}]`).append($(val));
 			});
 		}
-	};
+	}
 
 	moveMapHint();
 	match[0].addListener(moveMapHint);
-
-
 
 	// Клон элементов в мобильное меню
 
@@ -270,15 +279,15 @@ $(document).ready(function () {
 
 	$(window).scroll(function (e) {
 		if ($(this).scrollTop() > 0) {
-		  $('#scroller').fadeIn();
+			$("#scroller").fadeIn();
 		} else {
-		  $('#scroller').fadeOut();
+			$("#scroller").fadeOut();
 		}
-	  });
-	  $('#scroller').click(function (e) {
+	});
+	$("#scroller").click(function (e) {
 		e.preventDefault();
-		$('body,html').animate({ scrollTop: 0 }, 400);
-	  });
+		$("body,html").animate({ scrollTop: 0 }, 400);
+	});
 
 	// Попапы
 	// $(".js-show-popup").on("click", function (e) {
@@ -326,7 +335,5 @@ $(document).ready(function () {
 		$(this).addClass("active");
 
 		$(elementId).addClass("active");
-		
 	});
 });
-
