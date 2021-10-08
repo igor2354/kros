@@ -818,7 +818,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
     font-family: "OpenSans", sans-serif;
     font-size: 150px;
     line-height: 1.36;
-    color: #A9B3C2;
+    color: #a9b3c2;
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
@@ -1002,7 +1002,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
 .advantages {
   font-family: "OpenSans", sans-serif;
   background: #fff;
-  color: #14120B; }
+  color: #14120b; }
   .advantages__wrap {
     padding: 80px 0 70px 0;
     display: grid;
@@ -1017,9 +1017,9 @@ h1:not(.main-section .main-section__title), .title_h1 {
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .advantages__item:hover .advantages__green-hover {
-      stroke: #CDCC42; }
+      stroke: #cdcc42; }
     .advantages__item:active .advantages__green-hover {
-      stroke: #CDCC42; }
+      stroke: #cdcc42; }
     .advantages__item:hover .advantages__text {
       background-position: 0 100%; }
     .advantages__item:active .advantages__text {
@@ -1028,9 +1028,9 @@ h1:not(.main-section .main-section__title), .title_h1 {
     padding-top: 17px;
     position: relative;
     overflow: hidden;
-    background: -webkit-gradient(linear, left top, right top, from(#CDCC42), color-stop(50%, #CDCC42), color-stop(50%, #000));
-    background: -o-linear-gradient(left, #CDCC42, #CDCC42 50%, #000 50%);
-    background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #000 50%);
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #000));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #000 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #000 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1068,7 +1068,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
     grid-row-gap: 30px; } }
 
 .leaders {
-  background: #14120B; }
+  background: #14120b; }
   .leaders__wrap {
     padding: 67px 0 77px 0; }
   .leaders__title {
@@ -1076,7 +1076,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
     font-size: 135px;
     line-height: 1.36;
     text-align: center;
-    color: #3C3C3C;
+    color: #3c3c3c;
     margin-bottom: 53px;
     position: relative; }
   .leaders__row {
@@ -1113,7 +1113,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
       height: 1px;
       bottom: 20px;
       right: 0;
-      border-bottom: 1px solid #CDCC42; }
+      border-bottom: 1px solid #cdcc42; }
     .leaders__title-h2:after {
       position: absolute;
       content: "";
@@ -1121,7 +1121,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
       height: 1px;
       bottom: 8px;
       right: 0;
-      border-bottom: 1px solid #CDCC42; }
+      border-bottom: 1px solid #cdcc42; }
   .leaders__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1134,8 +1134,8 @@ h1:not(.main-section .main-section__title), .title_h1 {
     position: absolute;
     bottom: -17px;
     left: 0;
-    background: #FAFAFA;
-    color: #14120B;
+    background: #fafafa;
+    color: #14120b;
     font-size: 24px;
     line-height: 1.094;
     padding: 29px 0 29px 79px;
@@ -1153,9 +1153,9 @@ h1:not(.main-section .main-section__title), .title_h1 {
     position: relative;
     padding-left: 15px;
     overflow: hidden;
-    background: -webkit-gradient(linear, left top, right top, from(#CDCC42), color-stop(50%, #CDCC42), color-stop(50%, #fff));
-    background: -o-linear-gradient(left, #CDCC42, #CDCC42 50%, #fff 50%);
-    background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #fff 50%);
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #fff));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #fff 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #fff 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1201,7 +1201,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
       background-position: 0 100%; }
     .leaders__list-item:active .leaders__link-more:after,
     .leaders__list-item:hover .leaders__link-more:after {
-      border-color: #CDCC42;
+      border-color: #cdcc42;
       width: 0; }
   .leaders__list-item-link {
     position: absolute;
@@ -1313,7 +1313,8 @@ h1:not(.main-section .main-section__title), .title_h1 {
     -webkit-transform: translate(50%, -50%);
         -ms-transform: translate(50%, -50%);
             transform: translate(50%, -50%); }
-  .leaders__title, .leaders__row {
+  .leaders__title,
+  .leaders__row {
     margin-bottom: 5%; }
   .leaders__title-h2 {
     text-align: center; }
@@ -1324,7 +1325,8 @@ h1:not(.main-section .main-section__title), .title_h1 {
 @media (max-width: 700px) {
   .leaders__row {
     width: 80%; }
-  .leaders__image-block, .leaders__text {
+  .leaders__image-block,
+  .leaders__text {
     margin-bottom: 10%; } }
 
 @media (max-width: 600px) {
@@ -1332,7 +1334,8 @@ h1:not(.main-section .main-section__title), .title_h1 {
     grid-template-columns: 1fr; }
   .leaders__image-block img:not(.middle-plus) {
     width: 100%; }
-  .leaders__image-block, .leaders__text {
+  .leaders__image-block,
+  .leaders__text {
     margin-bottom: 5%; }
   .leaders__list:before {
     display: none; } }
@@ -1382,7 +1385,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
       height: 1px;
       bottom: -20px;
       left: 0;
-      border-bottom: 1px solid #CDCC42; }
+      border-bottom: 1px solid #cdcc42; }
     .portfolio__title-h2 span:first-child:after {
       position: absolute;
       content: "";
@@ -1390,7 +1393,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
       height: 1px;
       bottom: -32px;
       left: 0;
-      border-bottom: 1px solid #CDCC42; }
+      border-bottom: 1px solid #cdcc42; }
   .portfolio__title-h2 span:last-child {
     position: relative; }
     .portfolio__title-h2 span:last-child:before {
@@ -1400,7 +1403,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
       height: 1px;
       bottom: -20px;
       right: 0;
-      border-bottom: 1px solid #CDCC42; }
+      border-bottom: 1px solid #cdcc42; }
     .portfolio__title-h2 span:last-child:after {
       position: absolute;
       content: "";
@@ -1408,10 +1411,10 @@ h1:not(.main-section .main-section__title), .title_h1 {
       height: 1px;
       bottom: -32px;
       right: 0;
-      border-bottom: 1px solid #CDCC42; }
+      border-bottom: 1px solid #cdcc42; }
 
 .portfolio__background-color {
-  background: #14120B; }
+  background: #14120b; }
   .portfolio__background-color .container {
     position: relative; }
   .portfolio__background-color .portfolio__wrap {
@@ -1430,7 +1433,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
 
 .portfolio__block {
   background: #fff;
-  color: #14120B;
+  color: #14120b;
   padding-top: 28px;
   padding-bottom: 25px; }
 
@@ -1477,9 +1480,9 @@ h1:not(.main-section .main-section__title), .title_h1 {
   position: relative; }
 
 .item-more {
-  background: -webkit-gradient(linear, left top, right top, from(#CDCC42), color-stop(50%, #CDCC42), color-stop(50%, #14120B));
-  background: -o-linear-gradient(left, #CDCC42, #CDCC42 50%, #14120B 50%);
-  background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #14120B 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120b));
+  background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120b 50%);
+  background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1489,7 +1492,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
   -o-transition: background-position 275ms ease;
   transition: background-position 275ms ease;
   text-decoration: none;
-  color: #14120B;
+  color: #14120b;
   text-transform: uppercase;
   white-space: nowrap;
   height: 20px; }
@@ -1498,7 +1501,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
     content: "";
     bottom: 0;
     right: 0;
-    border-bottom: 2px solid #CDCC42;
+    border-bottom: 2px solid #cdcc42;
     width: 90%;
     height: 2px;
     -webkit-transition: all 275ms ease;
@@ -1517,14 +1520,14 @@ h1:not(.main-section .main-section__title), .title_h1 {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     left: 0;
-    color: #CDCC42;
+    color: #cdcc42;
     width: 11px;
     height: 11px; }
   .item-more:last-child {
     margin-bottom: 0; }
 
 .item-feature {
-  color: #9B9B9B; }
+  color: #9b9b9b; }
   .item-feature:before {
     position: absolute;
     content: "+";
@@ -1533,7 +1536,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     left: 0;
-    color: #CDCC42;
+    color: #cdcc42;
     font-size: 21px; }
   .item-feature:last-child {
     margin-bottom: 0; }
@@ -1553,7 +1556,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
     height: 13px; }
 
 .item-title {
-  color: #14120B;
+  color: #14120b;
   font-size: 24px;
   line-height: 1.094;
   padding-bottom: 31px;
@@ -1646,13 +1649,15 @@ h1:not(.main-section .main-section__title), .title_h1 {
 @media (max-width: 1170px) {
   .item-title {
     font-size: calc(20px + 4 * ((100vw - 320px) / 1150)); }
-  .block-info, .link-more {
+  .block-info,
+  .link-more {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1150)); } }
 
 @media (max-width: 1300px) {
   .item-title {
     padding-bottom: 7%; }
-  .block-info, .link-more {
+  .block-info,
+  .link-more {
     padding-left: 6%;
     padding-right: 7%;
     line-height: 1.5; }
@@ -1716,17 +1721,10 @@ h1:not(.main-section .main-section__title), .title_h1 {
   background: #fff; }
 
 .tenants__background-color .tenants-slider {
-  padding: 77px 0 111px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  margin-bottom: 38px; }
+
+.tenants__group-slider {
+  padding: 77px 0 111px 0; }
 
 .tenants__item {
   display: -webkit-box;
@@ -1740,14 +1738,11 @@ h1:not(.main-section .main-section__title), .title_h1 {
           align-items: center;
   width: 258px;
   height: 258px;
-  border: 1px solid #D3D3D3;
+  border: 1px solid #d3d3d3;
   border-radius: 50%;
   background: #fff; }
   .tenants__item:last-child {
     margin-right: 0px; }
-
-.tenants__list {
-  margin-bottom: 38px; }
 
 .tenants__next:before {
   position: absolute;
@@ -1771,13 +1766,17 @@ h1:not(.main-section .main-section__title), .title_h1 {
 .tenants__prev, .tenants__next {
   width: 51px;
   height: 57px; }
+  .tenants__prev::after, .tenants__next::after {
+    content: none; }
 
 .tenants .tenants__navigation {
   position: relative;
   width: 142px;
-  height: 57px; }
+  height: 57px;
+  margin: 0 auto; }
 
-.tenants .swiper-button-next, .tenants .swiper-button-prev {
+.tenants .swiper-button-next,
+.tenants .swiper-button-prev {
   margin-top: 0; }
 
 @media (max-width: 1170px) {
@@ -1789,7 +1788,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
 @media (max-width: 1300px) {
   .tenants__background-image .tenants__wrap {
     padding: 13% 0 14% 0; }
-  .tenants__background-color .tenants-slider {
+  .tenants__background-color .tenants__group-slider {
     padding: 5% 0 6% 0; } }
 
 @media (max-width: 1100px) {
@@ -1808,7 +1807,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
     margin-right: 0; } }
 
 @media (max-width: 500px) {
-  .tenants__background-color .tenants-slider {
+  .tenants__background-color .tenants__group-slider {
     padding: 5% 0 13% 0; }
   .tenants__prev:before,
   .tenants__next:before {
@@ -1827,7 +1826,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
   display: none; }
 
 .seo-text {
-  background: #14120B; }
+  background: #14120b; }
   .seo-text__wrap {
     padding: 151px 0 147px 0; }
   .seo-text__block {
