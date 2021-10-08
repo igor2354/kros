@@ -58,7 +58,9 @@ main {
 .breadcrumbs__item {
 		position: relative;
 		&:first-child {
-			margin-left: 0;
+			& a {
+				margin-left: 0;
+			}
 		}
 		&::after {
 			position: absolute;
@@ -81,7 +83,7 @@ main {
 
 	& span {
 		margin-left: 10px;
-		font-weight: 800;
+		font-weight: 600;
 	}
 
 }
@@ -107,7 +109,7 @@ section ul li:not(.breadcrumbs__item) {
 	}
 }
 
-h1, .title_h1 {
+h1:not(.main-section .main-section__title), .title_h1 {
 	font-family: "OpenSans", serif;
 	font-size: 80px;
 	line-height: 1;

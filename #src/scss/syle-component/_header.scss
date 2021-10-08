@@ -27,9 +27,9 @@
         position: absolute;
         content: "";
         bottom: -28px;
-        left: 0;
+        left: -17px;
         background: #fff;
-        width: 100%;
+        width: 223px;
         height: 29px;
       }
   }
@@ -233,6 +233,13 @@
 	}
 }
 
+@media (max-width: 1400px) {
+  .header__row .header__item:nth-child(2):after {
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+  }
+}
 @media (max-width: 1310px) {
   .header {
     height: 100px;
@@ -245,8 +252,6 @@
   .header__item:nth-child(4) {
     max-width: 200px;
   }
-
-
 }
 
 @media (max-width: 1170px) {
