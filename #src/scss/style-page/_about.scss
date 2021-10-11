@@ -483,6 +483,7 @@ section:last-child {
         border: 1px solid #9B9B9B;
         padding: 15px 15px 15px 77px;
         transition: all 0.3s ease;
+        color: #000;
         &:hover .reporting__title:before,
         &:active .reporting__title:before {
             background-image: url("../img/icon-pdf-hover.svg");

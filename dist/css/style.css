@@ -2414,7 +2414,8 @@ section:last-child .container-section__anchors .anchor.current::before {
   padding: 15px 15px 15px 77px;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  color: #000; }
   .reporting__item:hover .reporting__title:before,
   .reporting__item:active .reporting__title:before {
     background-image: url("../img/icon-pdf-hover.svg"); }
