@@ -276,6 +276,56 @@ h1:not(.main-section .main-section__title), .title_h1 {
   .color-link:hover {
     background-position: 0 100%; }
 
+.send-application {
+  background-color: #14120B;
+  padding: 20px 50px;
+  color: #FAFAFA;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .send-application:hover {
+    background-color: #CDCC42; }
+  .send-application:active {
+    background-color: #A2A121; }
+
+.title-h2 {
+  color: #000000;
+  font-family: "OpenSans", sans-serif;
+  font-size: 42px;
+  line-height: 1.1;
+  position: relative; }
+  .title-h2::before {
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 0;
+    width: 109px;
+    height: 1px;
+    border-bottom: 1px solid #CDCC42; }
+  .title-h2::after {
+    position: absolute;
+    content: "";
+    bottom: -32px;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    border-bottom: 1px solid #CDCC42; }
+
+.card-feature {
+  font-size: 14px;
+  line-height: 1;
+  color: #9B9B9B;
+  position: relative;
+  margin-bottom: 10px; }
+
+.card-value {
+  color: #14120B;
+  font-size: 18px;
+  line-height: 1; }
+
 .header {
   background: #fff;
   height: 100px;
@@ -2943,57 +2993,146 @@ section:last-child .container-section__anchors .anchor.current::before {
     padding: 80px 0 60px; }
   .rent-info__row {
     display: grid;
-    grid-template-columns: 3fr 5fr; }
+    grid-template-columns: 3fr 5fr;
+    margin-bottom: 40px; }
+    .rent-info__row:last-child {
+      margin-bottom: 0; }
+      .rent-info__row:last-child .rent-info__column:nth-child(2) {
+        border-left: 2.5px solid rgba(20, 18, 11, 0); }
+  .rent-info__column:first-child {
+    margin-right: 60px; }
   .rent-info__column:nth-child(2) {
-    border-left: 2.5px solid rgba(20, 18, 11, 0.2); }
+    border-left: 2.5px solid rgba(20, 18, 11, 0.2);
+    padding-left: 60px; }
+  .rent-info__h2 {
+    margin-bottom: 52px; }
   .rent-info__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px 150px; }
+    grid-template-columns: 1fr 0.8fr;
+    grid-gap: 40px 120px; }
   .rent-info__item {
     margin-left: 33px; }
-  .rent-info__feature {
-    font-size: 14px;
-    line-height: 1;
-    color: #9B9B9B;
+  .rent-info__feature:before {
+    position: absolute;
+    top: 0;
+    left: -35px;
+    background-repeat: no-repeat;
+    background-size: content;
+    content: ""; }
+  .rent-info__feature.money-icon:before {
+    background-image: url("../img/card-icon-1.svg");
+    width: 25px;
+    height: 14px; }
+  .rent-info__feature.grafic-icon::before {
+    background-image: url("../img/card-icon-3.svg");
+    width: 15px;
+    height: 14px;
+    left: -25px; }
+  .rent-info__feature.metro-icon::before {
+    background-image: url("../img/card-icon-2.svg");
+    width: 23px;
+    height: 23px; }
+  .rent-info__feature.play-icon::before {
+    background-image: url("../img/card-icon-4.svg");
+    width: 13px;
+    height: 14px;
+    left: -23px; }
+  .rent-info__numbers {
+    margin-bottom: 40px; }
+  .rent-info__map {
     position: relative;
-    margin-bottom: 10px; }
-    .rent-info__feature:before {
+    height: 360px; }
+    .rent-info__map::before {
       position: absolute;
-      top: 0;
-      left: -35px;
-      background-repeat: no-repeat;
-      background-size: content;
-      content: ""; }
-    .rent-info__feature.money-icon:before {
-      background-image: url("../img/card-icon-1.svg");
-      width: 25px;
-      height: 14px; }
-    .rent-info__feature.grafic-icon::before {
-      background-image: url("../img/card-icon-3.svg");
-      width: 15px;
-      height: 14px;
-      left: -25px; }
-    .rent-info__feature.metro-icon::before {
-      background-image: url("../img/card-icon-2.svg");
-      width: 23px;
-      height: 23px; }
-    .rent-info__feature.play-icon::before {
-      background-image: url("../img/card-icon-4.svg");
-      width: 13px;
-      height: 14px;
-      left: -23px; }
-  .rent-info__value {
-    font-size: 18px;
-    line-height: 1; }
-  .rent-info__h2 {
+      content: "";
+      bottom: -39px;
+      right: -39px;
+      width: 65px;
+      height: 65px;
+      background-image: url("../img/plus-map.svg");
+      background-size: contain; }
+    .rent-info__map img, .rent-info__map iframe {
+      height: 100%; }
+  .rent-info__subtitle {
     font-size: 18px;
     line-height: 1;
     margin-bottom: 10px; }
-  .rent-info__subtitle {
-    font-family: "OpenSans", sans-serif;
-    font-size: 42px;
-    line-height: 1.1; }
+  .rent-info p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #000;
+    margin-bottom: 15px; }
+    .rent-info p:last-child {
+      margin-bottom: 0; }
+  .rent-info__button {
+    padding-left: 60px; }
+
+.rent-data__wrap {
+  padding: 80px 0 60px; }
+
+.rent-data__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 150px; }
+
+.rent-data__h2 {
+  margin-bottom: 77px; }
+
+.rent-data__value {
+  font-weight: 600; }
+
+.best-photo__background-color {
+  background-color: #FAFAFA; }
+
+.best-photo__wrap {
+  padding: 80px 0 60px; }
+
+.best-photo__title {
+  margin-bottom: 80px; }
+  .best-photo__title:before {
+    display: none; }
+  .best-photo__title::after {
+    display: none; }
+
+.best-photo__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px; }
+
+.best-photo__image-link {
+  display: block;
+  overflow: hidden; }
+
+.best-photo__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .best-photo__image:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
+  .best-photo__image:active {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
+
+.tenants__background-color .tenants__wrap {
+  padding: 80px 0 60px; }
+
+.tenants__title {
+  margin-bottom: 20px; }
+  .tenants__title:before {
+    display: none; }
+  .tenants__title::after {
+    display: none; }
+
+.tenants__text {
+  font-size: 18px;
+  line-height: 1.44;
+  color: #000000; }
 
 .footer .footer-1 {
   background: #fff;
