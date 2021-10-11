@@ -24,8 +24,8 @@ body.lock {
 }
 
 html.lock {
-    overflow: hidden;
-  }
+	overflow: hidden;
+}
 
 main {
 	padding-top: 100px;
@@ -39,13 +39,7 @@ main {
 
 @media (max-width: 800px) {
 	main {
-		padding-top: 90px;
-	}
-}
-
-@media (max-width: 400px) {
-	main {
-		padding-top: 100px;
+		padding-top: 60px;
 	}
 }
 
@@ -56,42 +50,39 @@ main {
 }
 
 .breadcrumbs__item {
-		position: relative;
-		&:first-child {
-			& a {
-				margin-left: 0;
-			}
+	position: relative;
+	&:first-child {
+		& a {
+			margin-left: 0;
 		}
-		&::after {
-			position: absolute;
-			content: "/";
-			top: 0;
-			right: -5px;
-			
-		}
+	}
+	&::after {
+		position: absolute;
+		content: "/";
+		top: 0;
+		right: -5px;
+	}
 
-		&:last-child::after {
-			display: none;
-		}
+	&:last-child::after {
+		display: none;
+	}
 	& a {
 		color: #fff;
 		margin-right: 10px;
 		margin-left: 10px;
 		position: relative;
-
 	}
 
 	& span {
 		margin-left: 10px;
 		font-weight: 600;
 	}
-
 }
 
 @media (max-width: 1170px) {
-    .breadcrumbs__list {
-        @include adaptiv-font(16, 12);
-    }
+	.breadcrumbs__list {
+		@include adaptiv-font(16, 12);
+	}
 }
 
 section ul li:not(.breadcrumbs__item) {
@@ -109,7 +100,8 @@ section ul li:not(.breadcrumbs__item) {
 	}
 }
 
-h1:not(.main-section .main-section__title), .title_h1 {
+h1:not(.main-section .main-section__title),
+.title_h1 {
 	font-family: "OpenSans", serif;
 	font-size: 80px;
 	line-height: 1;
@@ -118,7 +110,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
 .color-link {
 	position: relative;
 	overflow: hidden;
-	background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #fff 50%);
+	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #fff 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -127,7 +119,7 @@ h1:not(.main-section .main-section__title), .title_h1 {
 	transition: background-position 275ms ease;
 	text-decoration: none; // text decorations are clipped in WebKit browsers
 	&:hover {
-	  background-position: 0 100%;
+		background-position: 0 100%;
 	}
 }
 
