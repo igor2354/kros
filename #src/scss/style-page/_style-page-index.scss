@@ -1035,18 +1035,6 @@
 			width: 53px;
 			height: 59px;
 		}
-		&:hover {
-			&:before {
-				background: url("../img/arrow-next-hover.svg") no-repeat;
-				background-size: contain;
-			}
-		}
-		&:active {
-			&:before {
-				background: url("../img/arrow-next-active.svg") no-repeat;
-				background-size: contain;
-			}
-		}
 	}
 
 	&__prev {
@@ -1059,24 +1047,46 @@
 			width: 53px;
 			height: 59px;
 		}
-		&:hover {
-			&:before {
-				background: url("../img/arrow-prev-hover.svg") no-repeat;
-				background-size: contain;
-			}
-		}
-		&:active {
-			&:before {
-				background: url("../img/arrow-prev-active.svg") no-repeat;
-				background-size: contain;
-			}
-		}
 	}
 
 	&__next,
 	&__prev {
 		width: 53px;
 		height: 59px;
+	}
+}
+
+@media (min-width: 1170px) {
+	.portfolio-slider {
+		&__next {
+			&:hover {
+				&:before {
+					background: url("../img/arrow-next-hover.svg") no-repeat;
+					background-size: contain;
+				}
+			}
+			&:active {
+				&:before {
+					background: url("../img/arrow-next-active.svg") no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+
+		&__prev {
+			&:hover {
+				&:before {
+					background: url("../img/arrow-prev-hover.svg") no-repeat;
+					background-size: contain;
+				}
+			}
+			&:active {
+				&:before {
+					background: url("../img/arrow-prev-active.svg") no-repeat;
+					background-size: contain;
+				}
+			}
+		}
 	}
 }
 
@@ -1242,10 +1252,6 @@
 		transition: all 0.3s ease;
 	}
 
-	&__next:hover:before {
-		background: url("../img/arrow-next-green-hover.svg") no-repeat center / contain;
-	}
-
 	&__prev:before {
 		position: absolute;
 		content: "";
@@ -1254,10 +1260,6 @@
 		width: 54px;
 		height: 59px;
 		transition: all 0.3s ease;
-	}
-
-	&__prev:hover:before {
-		background: url("../img/arrow-prev-green-hover.svg") no-repeat center / contain;
 	}
 
 	&__prev {
@@ -1284,6 +1286,18 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		margin-top: 0;
+	}
+}
+
+@media (min-width: 1170px) {
+	.tenants {
+		&__next:hover:before {
+			background: url("../img/arrow-next-green-hover.svg") no-repeat center / contain;
+		}
+
+		&__prev:hover:before {
+			background: url("../img/arrow-prev-green-hover.svg") no-repeat center / contain;
+		}
 	}
 }
 

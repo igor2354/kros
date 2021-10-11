@@ -1667,14 +1667,6 @@ h1:not(.main-section .main-section__title),
   width: 53px;
   height: 59px; }
 
-.portfolio-slider__next:hover:before {
-  background: url("../img/arrow-next-hover.svg") no-repeat;
-  background-size: contain; }
-
-.portfolio-slider__next:active:before {
-  background: url("../img/arrow-next-active.svg") no-repeat;
-  background-size: contain; }
-
 .portfolio-slider__prev:before {
   position: absolute;
   content: "";
@@ -1686,17 +1678,23 @@ h1:not(.main-section .main-section__title),
   width: 53px;
   height: 59px; }
 
-.portfolio-slider__prev:hover:before {
-  background: url("../img/arrow-prev-hover.svg") no-repeat;
-  background-size: contain; }
-
-.portfolio-slider__prev:active:before {
-  background: url("../img/arrow-prev-active.svg") no-repeat;
-  background-size: contain; }
-
 .portfolio-slider__next, .portfolio-slider__prev {
   width: 53px;
   height: 59px; }
+
+@media (min-width: 1170px) {
+  .portfolio-slider__next:hover:before {
+    background: url("../img/arrow-next-hover.svg") no-repeat;
+    background-size: contain; }
+  .portfolio-slider__next:active:before {
+    background: url("../img/arrow-next-active.svg") no-repeat;
+    background-size: contain; }
+  .portfolio-slider__prev:hover:before {
+    background: url("../img/arrow-prev-hover.svg") no-repeat;
+    background-size: contain; }
+  .portfolio-slider__prev:active:before {
+    background: url("../img/arrow-prev-active.svg") no-repeat;
+    background-size: contain; } }
 
 @media (max-width: 1170px) {
   .item-title {
@@ -1832,9 +1830,6 @@ h1:not(.main-section .main-section__title),
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-.tenants__next:hover:before {
-  background: url("../img/arrow-next-green-hover.svg") no-repeat center/contain; }
-
 .tenants__prev:before {
   position: absolute;
   content: "";
@@ -1845,9 +1840,6 @@ h1:not(.main-section .main-section__title),
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-
-.tenants__prev:hover:before {
-  background: url("../img/arrow-prev-green-hover.svg") no-repeat center/contain; }
 
 .tenants__prev {
   margin-right: 20px; }
@@ -1868,6 +1860,12 @@ h1:not(.main-section .main-section__title),
 .tenants .swiper-button-next,
 .tenants .swiper-button-prev {
   margin-top: 0; }
+
+@media (min-width: 1170px) {
+  .tenants__next:hover:before {
+    background: url("../img/arrow-next-green-hover.svg") no-repeat center/contain; }
+  .tenants__prev:hover:before {
+    background: url("../img/arrow-prev-green-hover.svg") no-repeat center/contain; } }
 
 @media (max-width: 1300px) {
   .tenants__background-image .tenants__wrap {
@@ -3096,11 +3094,11 @@ section:last-child .container-section__anchors .anchor.current::before {
     transition: all 0.3s ease; }
   .scroller:hover {
     cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #cdcc42; }
+    background-color: transparent; }
     .scroller:hover::after {
-      width: 15px;
-      height: 22px; }
+      -webkit-transform: translate(-50%, -50%) scale(1.5);
+          -ms-transform: translate(-50%, -50%) scale(1.5);
+              transform: translate(-50%, -50%) scale(1.5); }
 
 @media (max-width: 1300px) {
   .scroller {
