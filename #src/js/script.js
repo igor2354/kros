@@ -114,10 +114,6 @@ document.addEventListener(
 			loop: false,
 			watchOverflow: true,
 
-			// autoplay: {
-			// 	delay: 1000,
-			// },
-
 			// If we need pagination
 			pagination: {
 				el: ".slider-pagination",
@@ -184,6 +180,53 @@ document.addEventListener(
 );
 
 $(document).ready(function () {
+	// Клон элементов в мобильное меню
+
+	$.each($(".js-mobile-menu > li"), function (index, val) {
+		let clone = $(val).clone();
+		$("#menu > ul").append(clone);
+	});
+	// Активация мобильного меню
+
+	$("#menu").mmenu({
+		extensions: ["pagedim-black", "position-left"],
+		navbar: {
+			title: "Меню",
+		},
+	});
+
+	var $menu = $("#menu");
+	var $icon = $(".mobile-menu");
+	var API = $menu.data("mmenu");
+
+	function openMenu() {
+		API.open();
+	}
+
+	function closeMenu() {
+		API.close();
+	}
+	$icon.on("click", openMenu);
+	API.bind("open:finish", function () {
+		$icon.addClass("is-active");
+		$("html").addClass("lock");
+	});
+	API.bind("close:finish", function () {
+		$icon.removeClass("is-active");
+		$("html").removeClass("lock");
+	});
+
+	// Открытие поиска
+	$(".js-search").on("click", function () {
+		$("body").toggleClass("lock");
+		$(".search-panel").toggleClass("active");
+	});
+
+	$(".search-panel__close").on("click", function () {
+		$("body").removeClass("lock");
+		$(".search-panel").removeClass("active");
+	});
+
 	let match = [window.matchMedia("(max-width: 1170px)")];
 
 	// Расставляем точки на карте
@@ -241,42 +284,6 @@ $(document).ready(function () {
 	moveMapHint();
 	match[0].addListener(moveMapHint);
 
-	// Клон элементов в мобильное меню
-
-	$.each($(".js-mobile-menu > li"), function (index, val) {
-		let clone = $(val).clone();
-		$("#menu > ul").append(clone);
-	});
-	// Активация мобильного меню
-
-	$("#menu").mmenu({
-		extensions: ["pagedim-black", "position-left"],
-		navbar: {
-			title: "Меню",
-		},
-	});
-
-	var $menu = $("#menu");
-	var $icon = $(".mobile-menu");
-	var API = $menu.data("mmenu");
-
-	function openMenu() {
-		API.open();
-	}
-
-	function closeMenu() {
-		API.close();
-	}
-	$icon.on("click", openMenu);
-	API.bind("open:finish", function () {
-		$icon.addClass("is-active");
-		$("html").addClass("lock");
-	});
-	API.bind("close:finish", function () {
-		$icon.removeClass("is-active");
-		$("html").removeClass("lock");
-	});
-
 	$(window).scroll(function (e) {
 		if ($(this).scrollTop() > 0) {
 			$("#scroller").fadeIn();
@@ -284,9 +291,24 @@ $(document).ready(function () {
 			$("#scroller").fadeOut();
 		}
 	});
+
 	$("#scroller").click(function (e) {
 		e.preventDefault();
 		$("body,html").animate({ scrollTop: 0 }, 400);
+	});
+
+	$(".js-tab").on("click", function (e) {
+		e.preventDefault();
+
+		let elementId = $(this).attr("href");
+
+		$(this).parent().find(".js-tab").removeClass("active");
+
+		$(elementId).parent().find(".js-tab-item").removeClass("active");
+
+		$(this).addClass("active");
+
+		$(elementId).addClass("active");
 	});
 
 	// Попапы
@@ -322,18 +344,4 @@ $(document).ready(function () {
 	// 	$(this).fadeOut();
 	// 	$("body").removeClass("lock");
 	// });
-
-	$(".js-tab").on("click", function (e) {
-		e.preventDefault();
-
-		let elementId = $(this).attr("href");
-
-		$(this).parent().find(".js-tab").removeClass("active");
-
-		$(elementId).parent().find(".js-tab-item").removeClass("active");
-
-		$(this).addClass("active");
-
-		$(elementId).addClass("active");
-	});
 });
