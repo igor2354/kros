@@ -1026,27 +1026,9 @@
 
 .portfolio-slider {
 	&__next {
-		&:before {
-			position: absolute;
-			content: "";
-			background: url("../img/arrow-next.svg") no-repeat;
-			background-size: contain;
-			transition: all 0.3s ease;
-			width: 53px;
-			height: 59px;
-		}
 	}
 
 	&__prev {
-		&:before {
-			position: absolute;
-			content: "";
-			background: url("../img/arrow-prev.svg") no-repeat;
-			background-size: contain;
-			transition: all 0.3s ease;
-			width: 53px;
-			height: 59px;
-		}
 	}
 
 	&__next,
@@ -1059,31 +1041,48 @@
 @media (min-width: 1170px) {
 	.portfolio-slider {
 		&__next {
+			& svg {
+				& path {
+					transition: all 0.3s ease;
+				}
+			}
+
 			&:hover {
-				&:before {
-					background: url("../img/arrow-next-hover.svg") no-repeat;
-					background-size: contain;
+				& svg {
+					& path {
+						stroke-width: 2;
+					}
 				}
 			}
 			&:active {
-				&:before {
-					background: url("../img/arrow-next-active.svg") no-repeat;
-					background-size: contain;
+				& svg {
+					& path {
+						stroke-width: 1;
+						stroke: #cdcc42;
+					}
 				}
 			}
 		}
 
 		&__prev {
+			& svg {
+				& path {
+					transition: all 0.3s ease;
+				}
+			}
 			&:hover {
-				&:before {
-					background: url("../img/arrow-prev-hover.svg") no-repeat;
-					background-size: contain;
+				& svg {
+					& path {
+						stroke-width: 2;
+					}
 				}
 			}
 			&:active {
-				&:before {
-					background: url("../img/arrow-prev-active.svg") no-repeat;
-					background-size: contain;
+				& svg {
+					& path {
+						stroke-width: 1;
+						stroke: #cdcc42;
+					}
 				}
 			}
 		}
@@ -1238,30 +1237,10 @@
 
 	&__list {
 	}
+
 	&__next {
 		transition: all 0.3s ease;
 	}
-
-	&__next:before {
-		position: absolute;
-		content: "";
-		background: url("../img/arrow-next-green.svg") no-repeat center / contain;
-		background-size: contain;
-		width: 53px;
-		height: 59px;
-		transition: all 0.3s ease;
-	}
-
-	&__prev:before {
-		position: absolute;
-		content: "";
-		background: url("../img/arrow-prev-green.svg") no-repeat center / contain;
-		background-size: contain;
-		width: 54px;
-		height: 59px;
-		transition: all 0.3s ease;
-	}
-
 	&__prev {
 		margin-right: 20px;
 	}
@@ -1291,12 +1270,28 @@
 
 @media (min-width: 1170px) {
 	.tenants {
-		&__next:hover:before {
-			background: url("../img/arrow-next-green-hover.svg") no-repeat center / contain;
+		&__next {
+			& path {
+				transition: all 0.3s ease;
+			}
 		}
 
-		&__prev:hover:before {
-			background: url("../img/arrow-prev-green-hover.svg") no-repeat center / contain;
+		&__prev {
+			& path {
+				transition: all 0.3s ease;
+			}
+		}
+
+		&__next:hover svg {
+			& path {
+				stroke-width: 2;
+			}
+		}
+
+		&__prev:hover svg {
+			& path {
+				stroke-width: 2;
+			}
 		}
 	}
 }
@@ -1376,18 +1371,6 @@
 	& .swiper-button-next:after {
 		display: none;
 	}
-
-	// & .swiper-button-next,
-	// & .swiper-container-rtl .swiper-button-prev {
-	//     right: -69px;
-	//     left: auto;
-	// }
-
-	// & .swiper-button-prev,
-	// & .swiper-container-rtl .swiper-button-next {
-	//     left: -69px;
-	//     right: auto;
-	// }
 }
 
 .seo-text {
