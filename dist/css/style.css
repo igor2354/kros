@@ -1898,7 +1898,7 @@ h1:not(.main-section .main-section__title),
 
 @media (max-width: 500px) {
   .tenants__background-color .tenants__group-slider {
-    padding: 5% 0 13% 0; }
+    padding: 10% 0 10% 0; }
   .tenants__prev:before,
   .tenants__next:before {
     width: 35px;
