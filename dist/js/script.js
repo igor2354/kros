@@ -311,37 +311,38 @@ $(document).ready(function () {
 		$(elementId).addClass("active");
 	});
 
-	// Попапы
-	// $(".js-show-popup").on("click", function (e) {
-	// 	e.preventDefault();
-	// 	$(".modal").fadeOut();
+});
 
-	// 	$(".popup-overlay").fadeIn();
-	// 	$($(this).attr("href")).fadeIn();
-	// 	$($(this).attr("href")).css({ "max-height": $(window).height() });
+//Попапы
+$(".js-show-popup").on("click", function (e) {
+	e.preventDefault();
+	$(".modal").fadeOut();
 
-	// 	$("body").addClass("lock");
+	$(".popup-overlay").fadeIn();
+	$($(this).attr("href")).fadeIn();
+	$($(this).attr("href")).css({ "max-height": $(window).height() });
 
-	// 	if ($(this).hasClass("--video")) {
-	// 		let srcVideo = $(this).attr("data-video-src");
-	// 		let srcIframe = $($(this).attr("href")).find("iframe").attr("src");
-	// 		if (!srcIframe.includes(srcVideo)) {
-	// 			$($(this).attr("href"))
-	// 				.find("iframe")
-	// 				.attr("src", srcIframe + srcVideo);
-	// 		}
-	// 	}
-	// });
+	$("body").addClass("lock");
 
-	// $(".js-modal-close").on("click", function (e) {
-	// 	$(this).parents(".modal").fadeOut();
-	// 	$(".popup-overlay").fadeOut();
-	// 	$("body").removeClass("lock");
-	// });
+	if ($(this).hasClass("--video")) {
+		let srcVideo = $(this).attr("data-video-src");
+		let srcIframe = $($(this).attr("href")).find("iframe").attr("src");
+		if (!srcIframe.includes(srcVideo)) {
+			$($(this).attr("href"))
+				.find("iframe")
+				.attr("src", srcIframe + srcVideo);
+		}
+	}
+});
 
-	// $(".popup-overlay").on("click", function (e) {
-	// 	$(".modal").fadeOut();
-	// 	$(this).fadeOut();
-	// 	$("body").removeClass("lock");
-	// });
+$(".js-modal-close").on("click", function (e) {
+	$(this).parents(".modal").fadeOut();
+	$(".popup-overlay").fadeOut();
+	$("body").removeClass("lock");
+});
+
+$(".popup-overlay").on("click", function (e) {
+	$(".modal").fadeOut();
+	$(this).fadeOut();
+	$("body").removeClass("lock");
 });
