@@ -130,14 +130,12 @@ document.addEventListener(
 
 		if (sliderTeam.length > 0) {
 			sliderTeam.forEach((element) => {
-				let centerImage = element.querySelector(".team__center-image");
-				let curentSrcImage = centerImage.getAttribute("src");
-
 				let swiper_team = new Swiper(element.querySelector(".team__container"), {
 					// Optional parameters
 					slidesPerView: 1,
 					spaceBetween: 20,
 					loop: true,
+					loopedSlides: 4,
 
 					breakpoints: {
 						500: {
@@ -155,21 +153,29 @@ document.addEventListener(
 							slidesPerView: 2,
 						},
 
-						800: {
+						900: {
 							spaceBetween: 120,
 							slidesPerView: 2,
 						},
 					},
+				});
+
+				let team_slider_center = new Swiper(element.querySelector(".slider-center"), {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					loop: true,
+					loopedSlides: 4,
+					fadeEffect: { crossFade: true },
+					virtualTranslate: true,
+					effect: "fade",
+
+					controller: {
+						control: swiper_team,
+					},
 
 					on: {
 						afterInit: function () {
-							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") : curentSrcImage;
-							centerImage.setAttribute("src", activeSlideSrc);
-						},
-
-						slideChange: function () {
-							let activeSlideSrc = this.slides[this.activeIndex].querySelector("img") ? this.slides[this.activeIndex].querySelector("img").getAttribute("src") : curentSrcImage;
-							centerImage.setAttribute("src", activeSlideSrc);
+							swiper_team.controller.control = this;
 						},
 					},
 				});
@@ -297,18 +303,47 @@ $(document).ready(function () {
 		$("body,html").animate({ scrollTop: 0 }, 400);
 	});
 
+	// Скрипт табов
 	$(".js-tab").on("click", function (e) {
 		e.preventDefault();
 
 		let elementId = $(this).attr("href");
 
-		$(this).parent().find(".js-tab").removeClass("active");
-
-		$(elementId).parent().find(".js-tab-item").removeClass("active");
+		$(this).parents(".js-tab-container").find(".js-tab").removeClass("active");
 
 		$(this).addClass("active");
 
-		$(elementId).addClass("active");
+		new Promise((resolve, reject) => {
+			$(elementId).parents(".js-tab-container").find(".js-tab-item").removeClass("active");
+			setTimeout(() => {
+				$(elementId).parents(".js-tab-container").find(".js-tab-item").css({ display: "none" });
+				resolve();
+			}, 200);
+		}).then(() => {
+			setTimeout(() => {
+				$(elementId).addClass("active");
+			}, 100);
+
+			$(elementId).css({ display: "block" });
+		});
+	});
+
+	$(".js-tab").eq(0).click();
+
+	// ПЛАВНЫЙ ЯКОРЬ
+	$(".js-anchor").click(function () {
+		let target = $(this).attr("href");
+		$("html, body").animate(
+			{
+				scrollTop: $(target).offset().top - 150,
+			},
+			800
+		);
+		return false;
+	});
+
+	$(".lightgallery").lightGallery({
+		selector: "a",
 	});
 
 	// Попапы

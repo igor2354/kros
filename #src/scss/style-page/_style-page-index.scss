@@ -274,9 +274,9 @@
 	&__wrap {
 		padding: 80px 0 70px 0;
 		display: grid;
-		grid-template-columns: 0.8fr 0.7fr 1fr;
+		grid-template-columns: 0.8fr 0.76fr 1fr;
 		grid-row-gap: 110px;
-		grid-column-gap: 140px;
+		grid-column-gap: 130px;
 	}
 	&__item {
 		display: flex;
@@ -316,6 +316,12 @@
 		// &:hover .advantages__green-hover {
 		//     stroke:#CDCC42;
 		// }
+	}
+}
+
+@media (max-width: 1400px) {
+	.advantages__wrap {
+		grid-column-gap: 100px;
 	}
 }
 

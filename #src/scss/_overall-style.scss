@@ -107,6 +107,13 @@ h1:not(.main-section .main-section__title),
 	line-height: 1;
 }
 
+@media (max-width: 1170px) {
+	h1:not(.main-section .main-section__title),
+	.title_h1 {
+		@include adaptiv-font(80, 30);
+	}
+}
+
 .color-link {
 	position: relative;
 	overflow: hidden;
