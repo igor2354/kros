@@ -2298,7 +2298,7 @@ section:last-child .container-section__anchors .anchor.current::before {
   padding-right: 55px;
   padding-bottom: 15px; }
 
-.history__tab-button:not(.active) {
+.history__tab-button:not(.active) span {
   position: relative;
   overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
@@ -2313,7 +2313,7 @@ section:last-child .container-section__anchors .anchor.current::before {
   -o-transition: background-position 275ms ease;
   transition: background-position 275ms ease;
   text-decoration: none; }
-  .history__tab-button:not(.active):hover {
+  .history__tab-button:not(.active) span:hover {
     background-position: 0 100%; }
 
 .history__tab-button {
@@ -2749,7 +2749,7 @@ section:last-child .container-section__anchors .anchor.current::before {
     -o-object-fit: cover;
        object-fit: cover; }
   .history__tab-control {
-    margin-bottom: 5%; }
+    margin-bottom: 40px; }
   .history .tab-container p {
     margin-bottom: 2%; }
     .history .tab-container p:last-child {
