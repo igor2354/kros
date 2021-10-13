@@ -75,7 +75,7 @@ main {
 
 	& span {
 		margin-left: 10px;
-		font-weight: 600;
+		// font-weight: 600;
 	}
 }
 
@@ -132,19 +132,19 @@ h1:not(.main-section .main-section__title),
 
 .send-application,
 .black-button {
-	background-color: #14120B;
+	background-color: #14120b;
 	padding: 20px 50px;
-	color: #FAFAFA;
+	color: #fafafa;
 	font-size: 24px;
 	line-height: 1.1;
 	text-align: center;
 	transition: all 0.3s ease;
 	&:hover {
-		background-color: #CDCC42;
+		background-color: #cdcc42;
 	}
 
 	&:active {
-		background-color: #A2A121;
+		background-color: #a2a121;
 	}
 }
 
@@ -161,7 +161,7 @@ h1:not(.main-section .main-section__title),
 		left: 0;
 		width: 109px;
 		height: 1px;
-		border-bottom: 1px solid #CDCC42;
+		border-bottom: 1px solid #cdcc42;
 	}
 
 	&::after {
@@ -171,18 +171,18 @@ h1:not(.main-section .main-section__title),
 		left: 0;
 		width: 50px;
 		height: 1px;
-		border-bottom: 1px solid #CDCC42;
+		border-bottom: 1px solid #cdcc42;
 	}
 }
 
 .card-feature {
 	font-size: 14px;
 	line-height: 1;
-	color: #9B9B9B;
+	color: #9b9b9b;
 	margin-bottom: 10px;
 	position: relative;
 	// overflow: hidden;
-	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9B9B9B 50%);
+	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -193,37 +193,38 @@ h1:not(.main-section .main-section__title),
 }
 
 .card-value {
-	color: #14120B;
+	color: #14120b;
 	font-size: 18px;
 	line-height: 1;
 }
 
 @media (max-width: 1170px) {
-    .card-feature {
-        @include adaptiv-font(14, 10);
-    }
+	.card-feature {
+		@include adaptiv-font(14, 10);
+	}
 
-    .card-value {
-        @include adaptiv-font(18, 14);
-    }
+	.card-value {
+		@include adaptiv-font(18, 14);
+	}
 
-    .title-h2 {
-        @include adaptiv-font(42, 24);
-    }
+	.title-h2 {
+		@include adaptiv-font(42, 24);
+	}
 
-	.send-application, .black-button {
+	.send-application,
+	.black-button {
 		@include adaptiv-font(24, 18);
 	}
 }
 
 @media (max-width: 500px) {
-    .title-h2::before {
-        bottom: -7px;
-    }
+	.title-h2::before {
+		bottom: -7px;
+	}
 
-    .title-h2::after {
-        bottom: -15px;
-    }
+	.title-h2::after {
+		bottom: -15px;
+	}
 }
 
 .popup-general {

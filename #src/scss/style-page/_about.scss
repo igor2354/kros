@@ -241,9 +241,9 @@ section:last-child {
 
 .history {
 	&__tab-control {
-		height: 42px;
 		display: flex;
 		align-items: flex-end;
+		flex-wrap: wrap;
 		margin-bottom: 65px;
 	}
 
@@ -269,6 +269,9 @@ section:last-child {
 	}
 
 	&__tab-button {
+		display: flex;
+		align-items: flex-end;
+		min-height: 50px;
 		font-size: 24px;
 		line-height: 1.1;
 		color: #9b9b9b;
@@ -536,7 +539,6 @@ section:last-child {
 		}
 
 		&:active .reporting__size {
-			border: 1px solid #9b9b9b;
 			color: #cdcc42;
 		}
 	}
@@ -598,7 +600,7 @@ section:last-child {
 		top: 30px;
 		left: 30px;
 		width: 567px;
-		height: 279px;
+		min-height: 279px;
 		color: #14120b;
 		border: 1px solid #cdcc42;
 		box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.35);
@@ -620,13 +622,19 @@ section:last-child {
 		position: absolute;
 		&.active {
 			z-index: 3;
+
+			& .our-offices__icon-marker {
+				transform: scale(1.2);
+			}
 		}
 	}
 
 	&__icon-marker {
-		background-image: url("../img/icon-marker.svg");
+		cursor: pointer;
+		background: url("../img/icon-marker.svg") no-repeat center / contain;
 		width: 23px;
 		height: 27px;
+		transition: all 0.3s ease;
 	}
 	&__info {
 		opacity: 0;
@@ -753,6 +761,14 @@ section:last-child {
 		padding-top: 7%;
 	}
 
+	.reporting .container-section__content {
+		padding-bottom: 7%;
+	}
+
+	.our-offices .container-section__wrap {
+		padding-bottom: 7%;
+	}
+
 	.history__image {
 		padding-right: 20px;
 		max-height: 300px;
@@ -827,6 +843,7 @@ section:last-child {
 		right: initial;
 		left: initial;
 		top: initial;
+		min-height: initial;
 	}
 
 	.container-section__group {
@@ -1053,6 +1070,11 @@ section:last-child {
 	.team__column:last-child li {
 		margin-bottom: 15px;
 	}
+
+	.our-offices__icon-marker {
+		width: 17px;
+		height: 18px;
+	}
 }
 
 @media (max-width: 700px) {
@@ -1069,7 +1091,7 @@ section:last-child {
 	}
 
 	.our-offices__info {
-		height: 200px;
+		min-height: 200px;
 	}
 
 	.our-offices__addres::after {
@@ -1120,6 +1142,10 @@ section:last-child {
 		left: -3px;
 		width: 50px;
 		height: 50px;
+	}
+
+	.our-offices__contacts a {
+		margin-bottom: 5%;
 	}
 }
 
@@ -1231,7 +1257,7 @@ section:last-child {
 	}
 
 	.our-offices__addres {
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 	}
 
 	.our-offices__info::before {
