@@ -130,6 +130,22 @@ h1:not(.main-section .main-section__title),
 	}
 }
 
+.color-link-grey {
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 275ms ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+	&:hover {
+		background-position: 0 100%;
+	}
+}
+
 .send-application,
 .black-button {
 	background-color: #14120b;
