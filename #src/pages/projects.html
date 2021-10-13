@@ -1,0 +1,62 @@
+@@include("../components/_header.html")
+
+<main>
+    <section class="top-section projects-section" >
+        <div class="main-slider swiper-container">
+            <div class="main-slider__wrap swiper-wrapper">
+                <div class="main-slider__slide swiper-slide">
+                    <div class="main-slider__image">
+                        <img src="img/project-image-1.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+          <div class="top-section__wrap">
+            <div class="row-top__breadcrumbs breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="#" class="color-link" >Главная</a></li>
+                    <li class="breadcrumbs__item"><span>Проекты</span></li>
+                </ul>
+            </div>
+            <div class="top-section__block">
+                <div class="top-section__h1 title_h1">
+                    Проекты
+                  </div>
+                  <div class="top-section__subtitle">
+                    Valartis Group
+                  </div>
+            </div>
+            <div class="slider-control">
+                <div class="slider-prev swiper-button-prev"></div>
+
+                <div class="slider-pagination swiper-pagination"></div>
+                
+                <div class="slider-next swiper-button-next"></div>
+            </div>
+        </div>
+      </section>
+    <section class="catalog js-tab-container">
+        <div class="container">
+            <div class="catalog__wrap">
+                <div class="catalog__tab-control">
+                    <a href="#business-centers" class="catalog__tab-button js-tab active title-h3">Бизнес центры</a>
+                    <a href="#club-houses" class="catalog__tab-button js-tab title-h3">Клубные дома</a>
+                </div>
+                <div class="catalog__tab-content">
+                    <div class="catalog__tab-item active js-tab-item" id="business-centers">
+                        <div class="tab">
+                            <div class="tab-container"></div>
+                    </div>
+                    <div class="catalog__tab-item js-tab-item" id="club-houses">
+                        <div class="tab">
+                            <div class="tab-container"></div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include("../components/_footer.html")
