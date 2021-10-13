@@ -3210,12 +3210,12 @@ section:last-child .container-section__anchors .anchor.current::before {
   .sale-info__feature a {
     font-size: 14px;
     line-height: 1;
-    color: #9B9B9B;
+    color: #9b9b9b;
     margin-bottom: 10px;
     position: relative;
-    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9B9B9B));
-    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9B9B9B 50%);
-    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9B9B9B 50%);
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -3242,7 +3242,8 @@ section:last-child .container-section__anchors .anchor.current::before {
       height: 65px;
       background-image: url("../img/plus-map.svg");
       background-size: contain; }
-    .rent-info__map img, .rent-info__map iframe,
+    .rent-info__map img,
+    .rent-info__map iframe,
     .sale-info__map img,
     .sale-info__map iframe {
       height: 100%;
@@ -3344,7 +3345,8 @@ section:last-child .container-section__anchors .anchor.current::before {
   .sale-info__map {
     height: 400px;
     width: 100%; }
-  .rent-info__map img, .rent-info .rent-info__map iframe,
+  .rent-info__map img,
+  .rent-info .rent-info__map iframe,
   .sale-info__map img,
   .sale-info .rent-info__map iframe {
     height: 100%;
@@ -3373,7 +3375,8 @@ section:last-child .container-section__anchors .anchor.current::before {
 @media (max-width: 700px) {
   .rent-info__list,
   .sale-info__list {
-    display: grid; } }
+    display: grid;
+    grid-gap: 30px; } }
 
 @media (max-width: 600px) {
   .rent-section .top-section__subtitle:before,
@@ -3415,25 +3418,18 @@ section:last-child .container-section__anchors .anchor.current::before {
   .sale-data__list {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5%;
-    grid-row-gap: 40px; } }
+    grid-row-gap: 40px; }
+  .rent-data__h2,
+  .sale-data__h2 {
+    margin-bottom: 10%; } }
 
 @media (max-width: 400px) {
-  .rent-data__list,
-  .sale-data__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 0 10px; }
   .rent-data__icon-image img,
   .sale-data__icon-image img {
     width: 60px; } }
 
 .best-photo__background-color {
-  background-color: #FAFAFA; }
+  background-color: #fafafa; }
 
 .best-photo__wrap {
   padding: 80px 0 60px; }
