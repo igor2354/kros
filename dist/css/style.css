@@ -457,13 +457,13 @@ h1:not(.main-section .main-section__title),
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999; }
+  z-index: 80; }
   .header.scrolled {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 100; }
+    z-index: 80; }
   .header__row {
     display: -webkit-box;
     display: -ms-flexbox;
