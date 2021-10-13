@@ -207,27 +207,23 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-family: "OpenSans", serif;
   font-size: 16px; }
 
 .breadcrumbs__item {
   position: relative; }
-  .breadcrumbs__item:first-child a {
-    margin-left: 0; }
-  .breadcrumbs__item::after {
-    position: absolute;
-    content: "/";
-    top: 0;
-    right: -5px; }
-  .breadcrumbs__item:last-child::after {
-    display: none; }
+  .breadcrumbs__item:not(:last-child) {
+    margin-right: 20px; }
+    .breadcrumbs__item:not(:last-child)::after {
+      position: absolute;
+      content: "/";
+      top: 0;
+      right: -12px; }
   .breadcrumbs__item a {
     color: #fff;
-    margin-right: 10px;
-    margin-left: 10px;
     position: relative; }
-  .breadcrumbs__item span {
-    margin-left: 10px; }
 
 @media (max-width: 1170px) {
   .breadcrumbs__list {
@@ -3393,6 +3389,10 @@ section:last-child .container-section__anchors .anchor.current::before {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 150px; }
+
+.rent-data__icon-image,
+.sale-data__icon-image {
+  margin-bottom: 15px; }
 
 .rent-data__h2,
 .sale-data__h2 {
