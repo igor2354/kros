@@ -45,37 +45,29 @@ main {
 
 .breadcrumbs__list {
 	display: flex;
+	flex-wrap: wrap;
 	font-family: "OpenSans", serif;
 	font-size: 16px;
 }
 
 .breadcrumbs__item {
 	position: relative;
-	&:first-child {
-		& a {
-			margin-left: 0;
+	&:not(:last-child) {
+		margin-right: 20px;
+		&::after {
+			position: absolute;
+			content: "/";
+			top: 0;
+			right: -12px;
 		}
 	}
-	&::after {
-		position: absolute;
-		content: "/";
-		top: 0;
-		right: -5px;
-	}
 
-	&:last-child::after {
-		display: none;
-	}
 	& a {
 		color: #fff;
-		margin-right: 10px;
-		margin-left: 10px;
 		position: relative;
 	}
 
 	& span {
-		margin-left: 10px;
-		// font-weight: 600;
 	}
 }
 

@@ -117,6 +117,7 @@ document.addEventListener(
 			// If we need pagination
 			pagination: {
 				el: ".slider-pagination",
+				clickable: true,
 			},
 
 			// Navigation arrows
@@ -345,7 +346,6 @@ $(document).ready(function () {
 	$(".lightgallery").lightGallery({
 		selector: "a",
 	});
-
 });
 
 //Попапы
