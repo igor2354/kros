@@ -6,9 +6,13 @@
 	height: 100%;
 	width: 100%;
 	&__image {
+		height: 100%;
+		width: 100%;
 		background-color: #000;
 	}
 	&__image img {
+		width: 100%;
+		height: 100%;
 		min-height: 382px;
 		object-fit: cover;
 		opacity: 0.62;
@@ -18,9 +22,10 @@
 .slider-control {
 	position: relative;
 	width: 100%;
-	height: 37px;
-	justify-content: center;
-	align-self: end;
+	// height: 37px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 	margin-bottom: 30px;
 	& .swiper-pagination-bullet {
 		width: 15px;
@@ -34,6 +39,11 @@
 	}
 
 	& .swiper-pagination-bullet-active {
+		position: static;
+		transform: none;
+		margin-top: 0;
+		display: flex;
+		align-items: center;
 		background: #cdcc42;
 		opacity: 1;
 	}
@@ -42,6 +52,9 @@
 	.slider-next {
 		width: 37px;
 		height: auto;
+		position: static;
+		transform: none;
+		margin-top: 0;
 	}
 
 	& .swiper-button-prev:after,
@@ -86,15 +99,14 @@
 		right: auto;
 	}
 
-	& .slider-pagination {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	& .slider-pagination:not(.swiper-pagination-lock) {
+		display: flex;
+		position: static;
 	}
 }
 
 .top-section {
-	height: 382px;
+	min-height: 382px;
 	position: relative;
 	& .container {
 		z-index: 2;
@@ -103,7 +115,7 @@
 	&__wrap {
 		padding-top: 40px;
 		position: relative;
-		height: 382px;
+		min-height: 382px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -125,6 +137,7 @@
 
 	&__block {
 		margin-top: 44px;
+		margin-bottom: 20px;
 		flex-grow: 1;
 	}
 
@@ -749,10 +762,6 @@ section:last-child {
 		margin-top: 4%;
 	}
 
-	.top-section__subtitle {
-		margin-top: 2%;
-	}
-
 	.slider-control {
 		margin-bottom: 3%;
 	}
@@ -890,7 +899,7 @@ section:last-child {
 	}
 
 	.top-section__subtitle {
-		@include adaptiv-font(34, 20);
+		@include adaptiv-font(34, 16);
 	}
 
 	.container-section__anchors .anchor.current {
@@ -934,7 +943,7 @@ section:last-child {
 	.top-section__wrap,
 	.top-section,
 	.main-slider__image img {
-		height: 300px;
+		min-height: 300px;
 	}
 
 	.top-section__h1:before {
@@ -1046,7 +1055,7 @@ section:last-child {
 	.top-section__wrap,
 	.top-section,
 	.main-slider__image img {
-		height: 250px;
+		min-height: 250px;
 	}
 
 	.team__column:first-child {
@@ -1154,6 +1163,16 @@ section:last-child {
 	.our-offices__contacts a {
 		margin-bottom: 5%;
 	}
+
+	.slider-control .swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		margin-right: 15px;
+	}
+
+	.top-section__subtitle {
+		margin-top: 15px;
+	}
 }
 
 @media (max-width: 600px) {
@@ -1168,7 +1187,7 @@ section:last-child {
 	.top-section__wrap,
 	.top-section,
 	.main-slider__image img {
-		height: 200px;
+		min-height: 200px;
 	}
 
 	.top-section__h1:before {
@@ -1237,7 +1256,7 @@ section:last-child {
 	.top-section__wrap,
 	.top-section,
 	.main-slider__image img {
-		height: 150px;
+		min-height: 150px;
 	}
 
 	.top-section__h1:before {
