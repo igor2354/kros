@@ -4415,7 +4415,7 @@ section:last-child .container-section__anchors .anchor.current::before {
   font-family: "OpenSans", sans-serif;
   font-size: 42px;
   line-height: 1.1;
-  color: #9B9B9B;
+  color: #9b9b9b;
   margin-right: 157px;
   position: relative;
   overflow: hidden;
@@ -4437,9 +4437,9 @@ section:last-child .container-section__anchors .anchor.current::before {
   .kso__title.active {
     color: #000000;
     position: relative;
-    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120B));
-    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120B 50%);
-    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120B 50%);
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120b));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120b 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -4566,7 +4566,7 @@ section:last-child .container-section__anchors .anchor.current::before {
     height: 40px; } }
 
 .program-feed {
-  background-color: #FAFAFA; }
+  background-color: #fafafa; }
   .program-feed__wrap {
     padding: 80px 0;
     display: -webkit-box;
@@ -4616,9 +4616,9 @@ section:last-child .container-section__anchors .anchor.current::before {
     position: relative;
     padding-right: 20px;
     overflow: hidden;
-    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9B9B9B));
-    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9B9B9B 50%);
-    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9B9B9B 50%);
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -4679,13 +4679,13 @@ section:last-child .container-section__anchors .anchor.current::before {
     padding: 20px;
     width: 330px;
     max-width: 100%;
-    border-bottom: 2px solid #14120B;
+    border-bottom: 2px solid #14120b;
     margin-bottom: 40px; }
   .program-feed__date {
     font-family: "OpenSans", sans-serif;
     font-size: 16px;
     line-height: 22px;
-    color: #9B9B9B;
+    color: #9b9b9b;
     margin-bottom: 10px;
     background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
     background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
@@ -4702,10 +4702,10 @@ section:last-child .container-section__anchors .anchor.current::before {
   .program-feed__description {
     font-size: 18px;
     line-height: 1.44;
-    color: #14120B;
-    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120B));
-    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120B 50%);
-    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120B 50%);
+    color: #14120b;
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120b));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120b 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -4771,8 +4771,6 @@ section:last-child .container-section__anchors .anchor.current::before {
         -ms-flex-align: start;
             align-items: flex-start; }
   .program-feed__all {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
     margin-top: 15px; } }
 
 .footer .footer-1 {
