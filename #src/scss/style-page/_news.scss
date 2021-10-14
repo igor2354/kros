@@ -107,18 +107,22 @@
 		line-height: 109.4%;
 		color: #9b9b9b;
 
-		overflow: hidden;
-		background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200% 100%;
-		background-position: 100%;
-		transition: background-position 275ms ease;
-		text-decoration: none;
+		& span {
+			overflow: hidden;
+			background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 200% 100%;
+			background-position: 100%;
+			transition: background-position 275ms ease;
+			text-decoration: none;
+		}
 
 		&:hover {
-			background-position: 0 100%;
+			& span {
+				background-position: 0 100%;
+			}
 		}
 
 		&:not(:first-child) {
@@ -130,11 +134,13 @@
 			line-height: 109.4%;
 			color: #14120b;
 
-			background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 200% 100%;
-			background-position: 100%;
+			& span {
+				background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-size: 200% 100%;
+				background-position: 100%;
+			}
 		}
 	}
 

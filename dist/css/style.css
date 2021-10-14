@@ -3818,36 +3818,38 @@ section:last-child .container-section__anchors .anchor.current::before {
   font-weight: normal;
   font-size: 24px;
   line-height: 109.4%;
-  color: #9b9b9b;
-  overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
-  background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-  background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  -webkit-transition: background-position 275ms ease;
-  -o-transition: background-position 275ms ease;
-  transition: background-position 275ms ease;
-  text-decoration: none; }
-  .tab-events__year:hover {
+  color: #9b9b9b; }
+  .tab-events__year span {
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-transition: background-position 275ms ease;
+    -o-transition: background-position 275ms ease;
+    transition: background-position 275ms ease;
+    text-decoration: none; }
+  .tab-events__year:hover span {
     background-position: 0 100%; }
   .tab-events__year:not(:first-child) {
     margin-left: 40px; }
   .tab-events__year.active {
     font-size: 42px;
     line-height: 109.4%;
-    color: #14120b;
-    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120b));
-    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120b 50%);
-    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%; }
+    color: #14120b; }
+    .tab-events__year.active span {
+      background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120b));
+      background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #14120b 50%);
+      background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%; }
 
 .tab-events__list {
   display: grid;
