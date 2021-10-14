@@ -383,24 +383,32 @@ h1:not(.main-section .main-section__title),
   .title-h2::after {
     bottom: -15px; } }
 
-.wrap-input input,
-.wrap-input textarea {
-  width: 100%;
-  padding: 10px 15px 10px 0;
-  font-family: "OpenSans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  border-bottom: 1px solid #14120b; }
-  .wrap-input input:focus,
-  .wrap-input textarea:focus {
-    border-color: #a99478;
-    background: #fff; }
-
-.wrap-input textarea {
-  resize: none;
-  min-height: 100px; }
+.wrap-input {
+  position: relative; }
+  .wrap-input svg {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    opacity: 0; }
+  .wrap-input input,
+  .wrap-input textarea {
+    width: 100%;
+    padding: 10px 15px 10px 0;
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    border-bottom: 1px solid #9b9b9b; }
+    .wrap-input input:focus,
+    .wrap-input textarea:focus {
+      border-color: #000; }
+      .wrap-input input:focus + svg,
+      .wrap-input textarea:focus + svg {
+        opacity: 1; }
+  .wrap-input textarea {
+    resize: none;
+    min-height: 100px; }
 
 .popup-general {
   position: fixed;

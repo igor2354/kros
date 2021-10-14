@@ -240,6 +240,15 @@ h1:not(.main-section .main-section__title),
 }
 
 .wrap-input {
+	position: relative;
+
+	& svg {
+		position: absolute;
+		top: 15px;
+		right: 0;
+		opacity: 0;
+	}
+
 	& input,
 	& textarea {
 		width: 100%;
@@ -249,10 +258,12 @@ h1:not(.main-section .main-section__title),
 		font-weight: normal;
 		font-size: 16px;
 		line-height: 22px;
-		border-bottom: 1px solid #14120b;
+		border-bottom: 1px solid #9b9b9b;
 		&:focus {
-			border-color: #a99478;
-			background: #fff;
+			border-color: #000;
+			& + svg {
+				opacity: 1;
+			}
 		}
 	}
 
