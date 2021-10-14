@@ -32,12 +32,12 @@
 			width: 110px;
 			height: 110px;
 		}
-		&:hover .catalog__metro,
-		&:hover .catalog__walk,
-		&:hover .catalog__more,
-		&:active .catalog__metro,
-		&:active .catalog__walk,
-		&:active .catalog__more {
+		&:hover .catalog__metro span,
+		&:hover .catalog__walk span,
+		&:hover .catalog__more span,
+		&:active .catalog__metro span,
+		&:active .catalog__walk span,
+		&:active .catalog__more span {
 			background-position: 0 100%;
 		}
 		&:hover .catalog__metro,
@@ -182,17 +182,19 @@
 	}
 	&__metro,
 	&__more {
-		font-family: "OpenSans", sans-serif;
-		font-size: 16px;
-		line-height: 1.375;
-		color: #14120b;
-		background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200% 100%;
-		background-position: 100%;
-		transition: background-position 275ms ease;
+		& span {
+			font-family: "OpenSans", sans-serif;
+			font-size: 16px;
+			line-height: 1.375;
+			color: #14120b;
+			background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 200% 100%;
+			background-position: 100%;
+			transition: background-position 275ms ease;
+		}
 	}
 
 	&__more {
@@ -211,17 +213,19 @@
 	}
 
 	&__walk {
-		font-family: "OpenSans", sans-serif;
-		font-size: 10px;
-		line-height: 1.4;
-		color: #9b9b9b;
-		background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200% 100%;
-		background-position: 100%;
-		transition: background-position 275ms ease;
+		& span {
+			font-family: "OpenSans", sans-serif;
+			font-size: 10px;
+			line-height: 1.4;
+			color: #9b9b9b;
+			background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 200% 100%;
+			background-position: 100%;
+			transition: background-position 275ms ease;
+		}
 	}
 }
 

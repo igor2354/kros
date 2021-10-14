@@ -3964,12 +3964,12 @@ section:last-child .container-section__anchors .anchor.current::before {
     left: -65px;
     width: 110px;
     height: 110px; }
-  .catalog__item:hover .catalog__metro,
-  .catalog__item:hover .catalog__walk,
-  .catalog__item:hover .catalog__more,
-  .catalog__item:active .catalog__metro,
-  .catalog__item:active .catalog__walk,
-  .catalog__item:active .catalog__more {
+  .catalog__item:hover .catalog__metro span,
+  .catalog__item:hover .catalog__walk span,
+  .catalog__item:hover .catalog__more span,
+  .catalog__item:active .catalog__metro span,
+  .catalog__item:active .catalog__walk span,
+  .catalog__item:active .catalog__more span {
     background-position: 0 100%; }
   .catalog__item:hover .catalog__metro path,
   .catalog__item:active .catalog__metro path {
@@ -4111,7 +4111,7 @@ section:last-child .container-section__anchors .anchor.current::before {
       height: 1px;
       border-bottom: 1px solid #cdcc42; }
 
-.catalog__metro, .catalog__more {
+.catalog__metro span, .catalog__more span {
   font-family: "OpenSans", sans-serif;
   font-size: 16px;
   line-height: 1.375;
@@ -4143,7 +4143,7 @@ section:last-child .container-section__anchors .anchor.current::before {
     height: 8px;
     width: 8px; }
 
-.catalog__walk {
+.catalog__walk span {
   font-family: "OpenSans", sans-serif;
   font-size: 10px;
   line-height: 1.4;
