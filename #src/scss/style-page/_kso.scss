@@ -9,21 +9,21 @@
 		margin-bottom: 70px;
 	}
 
-	&__tab-button:not(.active) span {
-		position: relative;
-		overflow: hidden;
-		background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200% 100%;
-		background-position: 100%;
-		transition: background-position 275ms ease;
-		text-decoration: none; // text decorations are clipped in WebKit browsers
-		&:hover {
-			background-position: 0 100%;
-		}
-	}
+	// &__tab-button:not(.active) span {
+	// 	position: relative;
+	// 	overflow: hidden;
+	// 	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+	// 	background-clip: text;
+	// 	-webkit-background-clip: text;
+	// 	-webkit-text-fill-color: transparent;
+	// 	background-size: 200% 100%;
+	// 	background-position: 100%;
+	// 	transition: background-position 275ms ease;
+	// 	text-decoration: none; // text decorations are clipped in WebKit browsers
+	// 	&:hover {
+	// 		background-position: 0 100%;
+	// 	}
+	// }
 
 	&__tab-button {
 		display: flex;
@@ -113,29 +113,34 @@
 		margin-right: 157px;
 		position: relative;
 		overflow: hidden;
-		background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 200% 100%;
-		background-position: 100%;
-		transition: background-position 275ms ease;
-		text-decoration: none; // text decorations are clipped in WebKit browsers
 		padding-bottom: 32px;
-		&:hover {
-			background-position: 0 100%;
-		}
-		&.active {
-			color: #000000;
-			position: relative;
-			background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
+		& span {
+			background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
 			background-clip: text;
+			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-size: 200% 100%;
 			background-position: 100%;
-			&:hover {
+			transition: background-position 275ms ease;
+			text-decoration: none;
+		}
+
+		&:hover {
+			& span {
 				background-position: 0 100%;
 			}
+		}
+		&.active {
+			& span {
+				color: #000000;
+				position: relative;
+				background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-size: 200% 100%;
+				background-position: 100%;
+			}
+
 			&:before {
 				position: absolute;
 				content: "";

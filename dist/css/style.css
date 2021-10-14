@@ -4308,24 +4308,6 @@ section:last-child .container-section__anchors .anchor.current::before {
       flex-wrap: wrap;
   margin-bottom: 70px; }
 
-.kso__tab-button:not(.active) span {
-  position: relative;
-  overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
-  background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-  background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  -webkit-transition: background-position 275ms ease;
-  -o-transition: background-position 275ms ease;
-  transition: background-position 275ms ease;
-  text-decoration: none; }
-  .kso__tab-button:not(.active) span:hover {
-    background-position: 0 100%; }
-
 .kso__tab-button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4419,22 +4401,23 @@ section:last-child .container-section__anchors .anchor.current::before {
   margin-right: 157px;
   position: relative;
   overflow: hidden;
-  background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
-  background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-  background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  -webkit-transition: background-position 275ms ease;
-  -o-transition: background-position 275ms ease;
-  transition: background-position 275ms ease;
-  text-decoration: none;
   padding-bottom: 32px; }
-  .kso__title:hover {
+  .kso__title span {
+    background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #9b9b9b));
+    background: -o-linear-gradient(left, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+    background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #9b9b9b 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    -webkit-transition: background-position 275ms ease;
+    -o-transition: background-position 275ms ease;
+    transition: background-position 275ms ease;
+    text-decoration: none; }
+  .kso__title:hover span {
     background-position: 0 100%; }
-  .kso__title.active {
+  .kso__title.active span {
     color: #000000;
     position: relative;
     background: -webkit-gradient(linear, left top, right top, from(#cdcc42), color-stop(50%, #cdcc42), color-stop(50%, #14120b));
@@ -4445,24 +4428,22 @@ section:last-child .container-section__anchors .anchor.current::before {
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     background-position: 100%; }
-    .kso__title.active:hover {
-      background-position: 0 100%; }
-    .kso__title.active:before {
-      position: absolute;
-      content: "";
-      bottom: 12px;
-      left: 0;
-      width: 109px;
-      height: 1px;
-      border-bottom: 1px solid #cdcc42; }
-    .kso__title.active:after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 1px;
-      border-bottom: 1px solid #cdcc42; }
+  .kso__title.active:before {
+    position: absolute;
+    content: "";
+    bottom: 12px;
+    left: 0;
+    width: 109px;
+    height: 1px;
+    border-bottom: 1px solid #cdcc42; }
+  .kso__title.active:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    border-bottom: 1px solid #cdcc42; }
 
 .kso__tab-image {
   margin-bottom: 65px;
