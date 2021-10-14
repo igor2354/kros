@@ -4578,8 +4578,7 @@ section:last-child .container-section__anchors .anchor.current::before {
     transition: all 0.3s ease; }
     .program-feed__item:hover .program-feed__date,
     .program-feed__item:active .program-feed__date {
-      background-position: 0 100%;
-      font-weight: 800; }
+      background-position: 0 100%; }
     .program-feed__item:hover .program-feed__description,
     .program-feed__item:active .program-feed__description {
       background-position: 0 100%; }
