@@ -35,6 +35,7 @@
 			background-size: 7px;
 			background-position: center;
 			background-repeat: no-repeat;
+			transition: all 0.3s ease;
 		}
 	}
 
@@ -54,7 +55,7 @@
 
 	&__link {
 		font-family: "OpenSans", sans-serif;
-		color: #14120B;
+		color: #14120b;
 	}
 
 	&__submenu {
@@ -63,7 +64,6 @@
 	}
 
 	&__submenu {
-
 	}
 
 	&__subitem {
@@ -79,7 +79,7 @@
 		font-family: "OpenSans", sans-serif;
 		display: block;
 		padding: 15px;
-		color: #14120B;
+		color: #14120b;
 		background: #fff;
 		transition: all 0.3s ease;
 	}
@@ -105,6 +105,10 @@
 				opacity: 1;
 				visibility: visible;
 			}
+
+			&.have-child::after {
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
 		}
 	}
 }
@@ -114,7 +118,7 @@
 .header .main-nav__link {
 	position: relative;
 	overflow: hidden;
-	background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #14120B 50%);
+	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -123,14 +127,14 @@
 	transition: background-position 275ms ease;
 	text-decoration: none; // text decorations are clipped in WebKit browsers
 	&:hover {
-	  background-position: 0 100%;
+		background-position: 0 100%;
 	}
-  }
+}
 
-  .header .main-nav__sublink {
+.header .main-nav__sublink {
 	position: relative;
 
-	background: linear-gradient(to right, #CDCC42, #CDCC42 50%, #14120B 50%);
+	background: linear-gradient(to right, #cdcc42, #cdcc42 50%, #14120b 50%);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -139,17 +143,17 @@
 	transition: background-position 275ms ease;
 	text-decoration: none; // text decorations are clipped in WebKit browsers
 	&:hover {
-	  background-position: 0 100%;
+		background-position: 0 100%;
 	}
-  }
+}
 
-  @media (max-width: 1400px) {
+@media (max-width: 1400px) {
 	.header .main-nav__item {
-	  margin-right: 35px;
+		margin-right: 35px;
 	}
-  }
+}
 
-  @media (max-width: 1300px) {
+@media (max-width: 1300px) {
 	.header .header__row:first-child .header__item:first-child:after {
 		display: none;
 	}
@@ -157,9 +161,9 @@
 	.header .main-nav__item {
 		margin-right: 15px;
 	}
-  }
+}
 
-  @media (max-width: 1170px) {
+@media (max-width: 1170px) {
 	.header .main-nav__link {
 		@include adaptiv-font(16, 12);
 	}
