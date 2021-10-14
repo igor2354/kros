@@ -3916,6 +3916,7 @@ section:last-child .container-section__anchors .anchor.current::before {
   .tab-events__list {
     grid-template-columns: 1fr 1fr; }
   .tab-events__button {
+    margin-bottom: 10px;
     padding-bottom: 25px;
     font-size: calc(22px + 20 * ((100vw - 320px) / 1150)); }
     .tab-events__button:not(:last-child) {

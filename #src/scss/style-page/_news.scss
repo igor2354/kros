@@ -245,6 +245,7 @@
 		}
 
 		&__button {
+			margin-bottom: 10px;
 			padding-bottom: 25px;
 			@include adaptiv-font(42, 22);
 			&:not(:last-child) {
