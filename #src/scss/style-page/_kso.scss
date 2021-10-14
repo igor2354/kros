@@ -41,7 +41,7 @@
 		&.active {
 			color: #14120b;
 			font-size: 42px;
-			line-height: 1.1;
+			line-height: 140%;
 			position: relative;
 			&::before {
 				position: absolute;
@@ -108,7 +108,7 @@
 	&__title {
 		font-family: "OpenSans", sans-serif;
 		font-size: 42px;
-		line-height: 1.1;
+		line-height: 140%;
 		color: #9b9b9b;
 		margin-right: 157px;
 		position: relative;

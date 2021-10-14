@@ -4328,7 +4328,7 @@ section:last-child .container-section__anchors .anchor.current::before {
   .kso__tab-button.active {
     color: #14120b;
     font-size: 42px;
-    line-height: 1.1;
+    line-height: 140%;
     position: relative; }
     .kso__tab-button.active::before {
       position: absolute;
@@ -4396,7 +4396,7 @@ section:last-child .container-section__anchors .anchor.current::before {
 .kso__title {
   font-family: "OpenSans", sans-serif;
   font-size: 42px;
-  line-height: 1.1;
+  line-height: 140%;
   color: #9b9b9b;
   margin-right: 157px;
   position: relative;
