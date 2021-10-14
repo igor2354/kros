@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/mmenu.css" />
+  <link rel="stylesheet" href="./css/lightgallery.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Valartis Group</title>
+</head>
+
+<body>
+
+  <nav id="menu" class="mm-menu_offcanvas">
+    <ul>
+
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <div class="header__row">
+            <div class="header__burger ">
+              <svg class="mob-menu__ham ham hamRotate ham8 mobile-menu" viewBox="0 0 100 100" height="50" width="50">
+                <path class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+                <path class="line middle" d="m 30,50 h 40" />
+                <path class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+              </svg>
+            </div>
+            <div class="header__item">
+              <div class="main-logo">
+                <a href="#">
+                  <img src="img/logo.svg" alt="" width="195">
+                </a>
+              </div>
+            </div>
+            <div class="header__item">
+              <nav class="main-nav shift">
+    <ul class="main-nav__list js-mobile-menu">
+
+        <li class="main-nav__item hover-item have-child">
+            <a href="#" class="main-nav__link">О компании</a>
+
+            <ul class="main-nav__submenu show-menu">
+
+                <li class="main-nav__subitem hover-item">
+                    <a href="#" class="main-nav__sublink hover-item">История</a>
+
+                    <ul class="main-nav__submenu show-menu">
+
+                        <li class="main-nav__subitem">
+                            <a href="#" class="main-nav__sublink hover-item">Пункт 1</a>
+                        </li>
+
+                        <li class="main-nav__subitem">
+                            <a href="#" class="main-nav__sublink hover-item">Пункт 2</a>
+                        </li>
+
+                        <li class="main-nav__subitem">
+                            <a href="#" class="main-nav__sublink hover-item">Пункт 3</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">О команде</a>
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">Длинное название пункта</a>
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">Отчетность</a>
+                </li>
+            </ul>
+
+        </li>
+
+        <li class="main-nav__item hover-item have-child hover-item">
+            <a href="#" class="main-nav__link">Проекты</a>
+
+            <ul class="main-nav__submenu show-menu">
+
+                <li class="main-nav__subitem  hover-item">
+                    <a href="#" class="main-nav__sublink hover-item">Женевский дом</a>
+
+                    <ul class="main-nav__submenu show-menu">
+
+                        <li class="main-nav__subitem">
+                            <a href="#" class="main-nav__sublink hover-item">История</a>
+                        </li>
+
+                        <li class="main-nav__subitem">
+                            <a href="#" class="main-nav__sublink hover-item">Планировка</a>
+                        </li>
+
+                        <li class="main-nav__subitem">
+                            <a href="#" class="main-nav__sublink hover-item">Дополнительная информация</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">Берлинский дом</a>
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">Длинное название пункта</a>
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">Еще один проект</a>
+                </li>
+
+                <li class="main-nav__subitem">
+                    <a href="#" class="main-nav__sublink hover-item">Пункт 5</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="main-nav__item hover-item">
+            <a href="#" class="main-nav__link">Лента событий</a>
+        </li>
+
+        <li class="main-nav__item hover-item">
+            <a href="#" class="main-nav__link">КСО</a>
+        </li>
+
+        <li class="main-nav__item hover-item">
+            <a href="#" class="main-nav__link">Контакты</a>
+
+        </li>
+
+    </ul>
+</nav>
+            </div>
+            <div class="header__item">
+              <div class="header__item-search js-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="header__item">
+              <div class="header__item-lang">
+                <a href="#" class="item-lang current">
+                  ru
+                </a>
+                <a href="#" class="item-lang">
+                  en
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__search-panel search-panel">
+        <div class="container">
+          <form action="#" class="search-panel__form">
+            <div class="search-panel__wrap">
+              <button type="submit" class="search-panel__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
+                  <circle cx="9" cy="9" r="8.5" stroke="#14120B" />
+                  <path d="M15.321 9.467a7 7 0 00-2.05-4.95M15.5 15l5 4.5" stroke="#14120B" stroke-linecap="round" />
+                </svg>
+              </button>
+              <input type="text" placeholder="Поиск">
+              <div class="search-panel__close"></div>
+            </div>
+          </form>
+
+          <div class="search-panel__result">
+            <div class="search-panel__result-list">
+              <a href="#" class="search-panel__result-item">
+                <span>Результат поиска 1</span>
+              </a>
+
+              <a href="#" class="search-panel__result-item">
+                <span>Результат поиска 2</span>
+              </a>
+              <a href="#" class="search-panel__result-item">
+                <span>Результат поиска 3</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- // HEADER -->
+
+<main>
+    <section class="top-section about-section">
+        <div class="main-slider swiper-container">
+            <div class="main-slider__wrap swiper-wrapper">
+                <div class="main-slider__slide swiper-slide">
+                    <div class="main-slider__image">
+                        <img src="img/about-image-1.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="top-section__wrap">
+                <div class="row-top__breadcrumbs breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="#" class="color-link">Главная</a></li>
+                        <li class="breadcrumbs__item"><span>Лента событий</span></li>
+                    </ul>
+                </div>
+                <div class="top-section__block">
+                    <h1 class="top-section__h1 title_h1">
+                        Лента событий
+                    </h1>
+                    <div class="top-section__subtitle">
+                        Valartis Group
+                    </div>
+                </div>
+                <div class="slider-control">
+                    <div class="slider-prev swiper-button-prev"></div>
+
+                    <div class="slider-pagination swiper-pagination"></div>
+
+                    <div class="slider-next swiper-button-next"></div>
+                </div>
+            </div>
+    </section>
+
+    <section class="page-news js-tab-container">
+        <div class="container">
+            <div class="page-news__wrap">
+                <div class="page-news__tab tab-events">
+                    <div class="tab-events__control">
+                        <a href="#news" class="tab-events__button js-tab active title-h3"><span>Новости</span></a>
+
+                        <a href="#press-releases" class="tab-events__button js-tab title-h3"><span>Пресс -
+                                релизы</span></a>
+                    </div>
+
+                    <div class="tab-events__tab-content">
+                        <div class="tab-events__tab-item active js-tab-item" id="news">
+                            <div class="tab-events__years">
+                                <a href="#" class="tab-events__year"><span>2017 год</span> </a>
+                                <a href="#" class="tab-events__year"><span>2018 год</span></a>
+                                <a href="#" class="tab-events__year active"><span>2019 год</span></a>
+                                <a href="#" class="tab-events__year"><span>2020 год</span></a>
+                                <a href="#" class="tab-events__year"><span>2021 год</span></a>
+                            </div>
+
+                            <div class="tab-events__group">
+                                <div class="tab-events__list">
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                </div>
+
+                                <a href="#" class="tab-events__all send-application">Показать еще</a>
+                            </div>
+                        </div>
+
+                        <div class="tab-events__tab-item js-tab-item" id="press-releases">
+                            <div class="tab-events__years">
+                                <a href="#" class="tab-events__year"><span>2017 год</span></a>
+                                <a href="#" class="tab-events__year"><span>2018 год</span></a>
+                                <a href="#" class="tab-events__year active"><span>2019 год</span></a>
+                                <a href="#" class="tab-events__year"><span>2020 год</span></a>
+                                <a href="#" class="tab-events__year"><span>2021 год</span></a>
+                            </div>
+
+                            <div class="tab-events__group">
+                                <div class="tab-events__list">
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                    <div class="tab-events__item card-events">
+                                        <a href="#" class="card-events__link"></a>
+                                        <div class="card-events__date">29 Июня 2021</div>
+                                        <div class="card-events__name">Эксперт РА повысил рейтинг<br> Valartis до ruA
+                                        </div>
+                                        <div class="card-events__text">Агенство РА повысило рейтинг<br>
+                                            кредитоспособности
+                                            до уровня ruA+</div>
+                                    </div>
+
+                                </div>
+
+                                <a href="#" class="tab-events__all send-application">Показать еще</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="footer-1">
+    <div class="container">
+      <div class="footer-1__wrap">
+        <div class="footer__row">
+          <div class="footer__column footer__logo-block">
+            <div class="footer__logo">
+              <img src="img/logo.svg" alt="">
+            </div>
+            <div class="footer__copyright">
+              © 2021 Valartis group. Все права защищены законом об авторском праве.
+            </div>
+          </div>
+          <div class="footer__column">
+            <div class="footer__title">Проекты в Москве</div>
+            <div class="footer__link-list">
+              <a href="#" class="footer__link">Женевский дом</a>
+              <a href="#" class="footer__link">Берлинский дом</a>
+              <a href="#" class="footer__link">Еще один проект</a>
+            </div>
+          </div>
+          <div class="footer__column">
+            <div class="footer__title">О компании</div>
+            <div class="footer__link-list">
+              <a href="#" class="footer__link">История</a>
+              <a href="#" class="footer__link">Команда</a>
+              <a href="#" class="footer__link">Отчетность</a>
+            </div>
+          </div>
+          <div class="footer__column">
+            <div class="footer__title">КСО</div>
+            <div class="footer__link-list">
+              <a href="#" class="footer__link">Наши цели</a>
+              <a href="#" class="footer__link">Достижения</a>
+              <a href="#" class="footer__link">Новости программ</a>
+            </div>
+          </div>
+          <div class="footer__column">
+            <div class="footer__title">Лента событий</div>
+            <div class="footer__link-list">
+              <a href="#" class="footer__link">Новости</a>
+              <a href="#" class="footer__link">Пресс-релизы</a>
+              <a href="#" class="footer__link">Контакты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-2">
+    <div class="container">
+      <div class="footer-2__wrap">
+        <div class="footer__row">
+          <div class="footer__column">
+            <a href="#" class="footer__link">Политика конфидециальности</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- // FOOTER -->
+<div class="popup-general modal --order" id="popup-order">
+
+
+  <div class="popup-general__body">
+
+    <div class="popup-general__close js-modal-close"></div>
+
+    <div class="popup-general__image"><img src="./img/image-popup-1.png" alt=""></div>
+
+    <div class="popup-general__wrap">
+
+      <div class="popup-general__group">
+
+        <div class="popup-general__title title-h2">Оставить заявку</div>
+
+        <form action="#" class="popup-general__form form-popup">
+          <div class="form-popup__list">
+            <div class="form-popup__wrap-input wrap-input">
+              <input type="text" placeholder="ФИО">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+                <path d="M1 5l3.6 4L10 1" stroke="#CDCC42" />
+              </svg>
+            </div>
+
+            <div class="form-popup__wrap-input wrap-input">
+              <input type="text" placeholder="E-mail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+                <path d="M1 5l3.6 4L10 1" stroke="#CDCC42" />
+              </svg>
+            </div>
+
+            <div class="form-popup__wrap-input wrap-input">
+              <input type="tel" placeholder="Телефон">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+                <path d="M1 5l3.6 4L10 1" stroke="#CDCC42" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-popup__subtext">
+            <label class="form-popup__check form-check">
+              <input type="checkbox" checked>
+              <span class="form-check__checkmark"></span>
+            </label>
+
+            <span class="form-popup__subtext-policy">
+              Я соглашаюсь с <a href="#">Политикой конфиденциальности</a>
+            </span>
+
+          </div>
+
+          <button type="submit" class="form-popup__button send-application">Отправить заявку</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="popup-general modal --video" id="popup-video">
+
+  <div class="popup-general__body">
+
+    <div class="popup-general__close js-modal-close"></div>
+
+    <div class="popup-general__wrap">
+      <div class="popup-general__group">
+        <iframe class="usage__video" src="https://www.youtube.com/embed/" frameborder="0"></iframe>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="popup-overlay"></div>
+<div id="scroller" class="scroller"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/mmenu.js"></script>
+<script src="./js/lightgallery-all.min.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+
+</html>

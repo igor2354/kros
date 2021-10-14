@@ -930,6 +930,69 @@
 </footer>
 
 <!-- // FOOTER -->
+<div class="popup-general modal --order" id="popup-order">
+
+
+  <div class="popup-general__body">
+
+    <div class="popup-general__close js-modal-close"></div>
+
+    <div class="popup-general__image"><img src="./img/image-popup-1.png" alt=""></div>
+
+    <div class="popup-general__wrap">
+
+      <div class="popup-general__group">
+
+        <div class="popup-general__title title-h2">Оставить заявку</div>
+
+        <form action="#" class="popup-general__form form-popup">
+          <div class="form-popup__list">
+            <div class="form-popup__wrap-input wrap-input">
+              <input type="text" placeholder="ФИО">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+                <path d="M1 5l3.6 4L10 1" stroke="#CDCC42" />
+              </svg>
+            </div>
+
+            <div class="form-popup__wrap-input wrap-input">
+              <input type="text" placeholder="E-mail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+                <path d="M1 5l3.6 4L10 1" stroke="#CDCC42" />
+              </svg>
+            </div>
+
+            <div class="form-popup__wrap-input wrap-input">
+              <input type="tel" placeholder="Телефон">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="none">
+                <path d="M1 5l3.6 4L10 1" stroke="#CDCC42" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-popup__subtext">
+            <label class="form-popup__check form-check">
+              <input type="checkbox" checked>
+              <span class="form-check__checkmark"></span>
+            </label>
+
+            <span class="form-popup__subtext-policy">
+              Я соглашаюсь с <a href="#">Политикой конфиденциальности</a>
+            </span>
+
+          </div>
+
+          <button type="submit" class="form-popup__button send-application">Отправить заявку</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
 <div class="popup-general modal --video" id="popup-video">
 
   <div class="popup-general__body">
@@ -937,7 +1000,9 @@
     <div class="popup-general__close js-modal-close"></div>
 
     <div class="popup-general__wrap">
-      <iframe class="usage__video" src="https://www.youtube.com/embed/" frameborder="0"></iframe>
+      <div class="popup-general__group">
+        <iframe class="usage__video" src="https://www.youtube.com/embed/" frameborder="0"></iframe>
+      </div>
     </div>
 
   </div>
